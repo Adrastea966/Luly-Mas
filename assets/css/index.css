@@ -1,2 +1,88 @@
-/*Fuentes*/
+@charset "UTF-8";
+/*VARIABLES*/
+/*Varibables -------------------------------------------------------------------------------*/
+/*Colores*/
+/*NORMALIZAR*/
+/*Normalizar -------------------------------------------------------------------------------*/
+/*Importar*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*Reiniciar*/
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+/*Globales*/
+html {
+  font-size: 62.5%;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth; }
+
+body {
+  overflow-x: hidden;
+  background-color: gray; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0; }
+
+/*PARTES*/
+/*PÁGINAS*/
+.body .main {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url("../../../assets/image/Fondo.png");
+  background-position: center;
+  background-size: auto;
+  background-repeat: no-repeat;
+  position: relative;
+  /*Header*/ }
+  .body .main .header {
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+    color: #FFF5EC; }
+    .body .main .header .logo {
+      cursor: pointer; }
+      .body .main .header .logo img {
+        width: 13rem;
+        height: 4rem; }
+    .body .main .header .nav ul {
+      display: flex;
+      gap: 2rem;
+      font-size: 1.8em; }
+      .body .main .header .nav ul li {
+        cursor: pointer; }
+    .body .main .header .redes {
+      display: flex;
+      gap: 1rem;
+      font-size: 2em;
+      cursor: pointer; }
+
+.body .textos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+  .body .textos img {
+    width: 75rem;
+    height: 15rem; }
+  .body .textos h2 {
+    width: 40rem;
+    text-align: center;
+    color: #FFF5EC;
+    font-size: 2em;
+    font-weight: 400; }
