@@ -336,6 +336,7 @@ ul {
             font-size: 1.5em;
             font-weight: 500;
             border: 2px solid #A09082;
+            border-radius: 100px;
             transition: .3s ease-in-out; }
             .body .destacados .tarjetas-productos .tarjeta-producto .botones .btn-tuto:hover,
             .body .destacados .tarjetas-productos .tarjeta-producto .botones .btn-comprar:hover {
