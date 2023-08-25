@@ -6,10 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luly Mas</title>
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/index.css">
 </head>
 
 <body class="body">
+
 
     <!--Main-->
     <main class="main">
@@ -18,13 +20,13 @@
         <header class="header" id="header">
 
             <div class="logo">
-                <img src="assets/image/Logo.png" alt="Logotipo de la empresa">
+                <a href="#">Luly Mas</a>
             </div>
 
             <nav class="nav" id="nav">
                 <ul>
                     <li><a href="#tutoriales">Tutoriales</a></li>
-                    <li><a href="#kits">Kits</a></li>
+                    <li><a href="#kits">Mis kits</a></li>
                     <li><a href="#ebooks">Ebooks</a></li>
                     <li><a href="#locales">Locales</a></li>
                 </ul>
@@ -41,12 +43,13 @@
 
         </header>
         <!--Fin header-->
+
+        <div class="frase">
+            <h2>Frase de tu empresa</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequuntur</p>
+        </div>
+
     </main>
-    <div class="textos">
-        <img src="assets/image/frase.png" alt="Frase de la empresa">
-        <h2>is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum</h2>
-    </div>
     <!--Fin main-->
 
     <!--Novedades-->
@@ -59,42 +62,42 @@
         <div class="container-novedades">
             <h2>Novedades</h2>
             <div class="tarjetas">
-                <div class="tarjeta">
+                <div data-aos="fade-up" class="tarjeta">
                     <h3>titulo novedad</h3>
                     <span>is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever
                         since the 1500s,</span>
                 </div>
-                <div class="tarjeta">
+                <div data-aos="fade-up" data-aos-delay="100" class="tarjeta">
                     <h3>titulo novedad</h3>
                     <span>is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever
                         since the 1500s,</span>
                 </div>
-                <div class="tarjeta">
+                <div data-aos="fade-up" data-aos-delay="200" class="tarjeta">
                     <h3>titulo novedad</h3>
                     <span>is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever
                         since the 1500s,</span>
                 </div>
-                <div class="tarjeta">
+                <div data-aos="fade-up" data-aos-delay="300" class="tarjeta">
                     <h3>titulo novedad</h3>
                     <span>is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever
                         since the 1500s,</span>
                 </div>
-                <div class="tarjeta">
+                <div data-aos="fade-up" data-aos-delay="400" class="tarjeta">
                     <h3>titulo novedad</h3>
                     <span>is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been
                         the industry's standard dummy text ever
                         since the 1500s,</span>
                 </div>
-                <div class="tarjeta">
+                <div data-aos="fade-up" data-aos-delay="500" class="tarjeta">
                     <h3>titulo novedad</h3>
                     <span>is simply dummy text of the printing and
                         typesetting industry. Lorem Ipsum has been
@@ -108,7 +111,7 @@
     <!--Fin novedades-->
 
     <!--Motivos Luly-->
-    <section class="motivos">
+    <section class="motivos" id="motivos">
 
         <div class="deco2">
             <img src="assets/image/dedo2.png" alt="Decoración dos, separador de seccion">
@@ -123,7 +126,7 @@
 
         <div class="iconos">
 
-            <div class="buena-atencion">
+            <div class="buena-atencion" data-aos="fade-up">
                 <i class="uil uil-heart-alt"></i>
                 <h3>Buena atención al cliente</h3>
                 <p>e industry's standard dummy
@@ -131,14 +134,14 @@
             </div>
 
 
-            <div class="precios">
+            <div class="precios" data-aos="fade-up" data-aos-delay="100">
                 <i class="uil uil-pricetag-alt"></i>
                 <h3>Precios accesibles</h3>
                 <p>e industry's standard dummy
                     text ever since the 1500s,</p>
             </div>
 
-            <div class="calidad">
+            <div class="calidad" data-aos="fade-up" data-aos-delay="200">
                 <i class="uil uil-award"></i>
                 <h3>Productos de buena calidad</h3>
                 <p>e industry's standard dummy
@@ -160,13 +163,25 @@
         <h2>Productos destacados</h2>
         <div class="tarjetas-productos">
             <div class="tarjeta-producto">
-
+                <img src="assets/image/producto1.png" alt="Imagen del primer producto">
+                <div class="botones">
+                    <a class="btn-tuto" btn-tuthref="#">Ver tutorial</a></button>
+                    <a class="btn-comprar" href="#">Lo quiero</a></button>
+                </div>
             </div>
             <div class="tarjeta-producto">
-
+                <img src="assets/image/producto2.png" alt="Imagen del segundo producto">
+                <div class="botones">
+                    <a class="btn-tuto" btn-tuthref="#">Ver tutorial</a></button>
+                    <a class="btn-comprar" href="#">Lo quiero</a></button>
+                </div>
             </div>
             <div class="tarjeta-producto">
-
+                <img src="assets/image/producto3.png" alt="Imagen del tercer producto">
+                <div class="botones">
+                    <a class="btn-tuto" btn-tuthref="#">Ver tutorial</a></button>
+                    <a class="btn-comprar" href="#">Lo quiero</a></button>
+                </div>
             </div>
         </div>
 
@@ -418,7 +433,7 @@
             <div class="nav-footer">
                 <ul>
                     <li><a href="#tutoriales">Tutoriales</a></li>
-                    <li><a href="#kits">Kits</a></li>
+                    <li><a href="#kits">Mis kits</a></li>
                     <li><a href="#ebooks">Ebooks</a></li>
                     <li><a href="#locales">Locales</a></li>
                 </ul>
@@ -445,6 +460,15 @@
 
     </Footer>
     <!--Fin footer-->
+
+    <button class="scroll-top-button" onclick="scrollToTop()"><i class="uil uil-angle-up"></i></button>
+
+    <!--Scripts-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="assets/js/index.js"></script>
 
 </body>
 
