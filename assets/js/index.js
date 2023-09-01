@@ -1,3 +1,4 @@
+//Header
 document.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     const main = document.querySelector('.main');
@@ -6,71 +7,50 @@ document.addEventListener('scroll', function() {
 
     if (mainTop < 0) {
         header.classList.add('scrolled');
-        changeColorToMarron();
+        changeColorToMarron(true);
     } else {
         header.classList.remove('scrolled');
-        resetColor();
+        changeColorToMarron(false);
     }
 });
 
-function changeColorToMarron() {
+function changeColorToMarron(isScrolled) {
+    const textColor = isScrolled ? '#A09082' : '#FFF5EC';
+    const hoverColor = isScrolled ? '#FF9CA2' : '#FF9CA2';
+    const hoverEndColor = isScrolled ? textColor : '#FFF5EC';
+
     const logo = document.querySelector('.logo');
     const navItems = document.querySelectorAll('.link-navbar');
     const socialIcons = document.querySelectorAll('.red');
 
-    logo.style.color = '#A09082';
+    logo.style.color = textColor;
     logo.addEventListener('mouseenter', () => {
-        logo.style.color = '#FF9CA2';
+        logo.style.color = hoverColor;
     });
     logo.addEventListener('mouseleave', () => {
-        logo.style.color = '#A09082';
+        logo.style.color = hoverEndColor;
     });
-    
+
     navItems.forEach(item => {
-        item.style.color = '#A09082'; 
-        item.style.fontWeight = '500';
+        item.style.color = textColor;
+        item.style.fontWeight = isScrolled ? '500' : '';
         item.addEventListener('mouseenter', () => {
-            item.style.color = '#FF9CA2'; 
+            item.style.color = hoverColor;
         });
         item.addEventListener('mouseleave', () => {
-            item.style.color = '#A09082';
+            item.style.color = hoverEndColor;
         });
     });
-    
+
     socialIcons.forEach(icon => {
-        icon.style.color = '#A09082'; 
-        icon.style.fontWeight = '500';
+        icon.style.color = textColor;
+        icon.style.fontWeight = isScrolled ? '500' : '';
         icon.addEventListener('mouseenter', () => {
-            icon.style.color = '#FF9CA2'; 
+            icon.style.color = hoverColor;
         });
         icon.addEventListener('mouseleave', () => {
-            icon.style.color = '#A09082';
+            icon.style.color = hoverEndColor;
         });
-    });
-}
-
-function resetColor() {
-    const logo = document.querySelector('.logo');
-    const navItems = document.querySelectorAll('.link-navbar');
-    const socialIcons = document.querySelectorAll('.red');
-
-    logo.style.color = ''; 
-    
-    logo.removeEventListener('mouseenter', null);
-    logo.removeEventListener('mouseleave', null);
-    
-    navItems.forEach(item => {
-        item.style.color = ''; 
-        item.style.fontWeight = '';
-        item.removeEventListener('mouseenter', null);
-        item.removeEventListener('mouseleave', null);
-    });
-    
-    socialIcons.forEach(icon => {
-        icon.style.color = ''; 
-        icon.style.fontWeight = '';
-        icon.removeEventListener('mouseenter', null);
-        icon.removeEventListener('mouseleave', null);
     });
 }
 
