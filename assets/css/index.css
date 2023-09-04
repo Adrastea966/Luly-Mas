@@ -48,13 +48,17 @@ ul {
   /*Kits*/
   /*Puntos de venta*/
   /*Footer*/
+  /*BOTONES*/
   /*btn scroll*/ }
   .body .main {
     width: 100%;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
-    /*Header*/ }
+    /*Header*/
+    /*----------------*/
+    /*  SCALLOP up    */
+    /*----------------*/ }
     .body .main::before {
       content: "";
       background-image: url("../../assets/image/Fondo.png");
@@ -148,6 +152,13 @@ ul {
             transition: color .3s ease-in-out; }
           .body .main .header .container .redes i:hover {
             color: #FF9CA2; }
+    .body .main .scallop-up {
+      position: absolute;
+      height: 100px;
+      width: 100%;
+      background-image: radial-gradient(50px at 50% 100%, #FFF5EC, #FFF5EC 49%, #ffffff00 51%, #ffffff00);
+      background-size: 49px 100%;
+      bottom: 0; }
   .body .novedades {
     width: 100%;
     min-height: 100vh;
@@ -155,19 +166,8 @@ ul {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; }
-    .body .novedades .deco {
-      position: absolute;
-      width: 100%;
-      height: 13rem;
-      top: 5%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 0; }
-      .body .novedades .deco img {
-        width: 100%;
-        height: 100%; }
+    align-items: center;
+    overflow: hidden; }
     .body .novedades .container {
       display: flex;
       flex-direction: column;
@@ -205,7 +205,8 @@ ul {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden; }
     .body .motivos .deco2,
     .body .motivos .deco2-2 {
       width: 30rem;
@@ -271,7 +272,8 @@ ul {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    overflow: hidden; }
     .body .destacados .container h2 {
       font-size: 2.5em;
       padding-bottom: 2rem; }
@@ -335,7 +337,11 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative; }
+    position: relative;
+    overflow: hidden;
+    /*----------------*/
+    /*  SCALLOP up    */
+    /*----------------*/ }
     .body .tutoriales::after {
       content: '';
       position: absolute;
@@ -346,10 +352,19 @@ ul {
       bottom: -20%;
       left: 50%;
       transform: translate(-50%, -50%); }
+    .body .tutoriales .scallop-up {
+      position: absolute;
+      height: 100px;
+      width: 100%;
+      background-image: radial-gradient(50px at 50% 100%, #FFCDD0, #FFCDD0 49%, #ffffff00 51%, #ffffff00);
+      background-size: 49px 100%;
+      bottom: 0;
+      z-index: 2; }
     .body .tutoriales .container {
       display: flex;
-      gap: 20rem;
-      z-index: 2; }
+      gap: 10rem;
+      z-index: 2;
+      padding: 0 5rem 0 5rem; }
       .body .tutoriales .container .titulo-tips {
         display: flex;
         flex-direction: column;
@@ -385,27 +400,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10rem; }
-    .body .sobre-mi .deco3,
-    .body .sobre-mi .deco3-3 {
-      position: absolute;
-      width: 100%;
-      height: 13rem;
-      pointer-events: none;
-      z-index: 0; }
-      .body .sobre-mi .deco3 img,
-      .body .sobre-mi .deco3-3 img {
-        width: 100%;
-        height: 100%; }
-    .body .sobre-mi .deco3 {
-      top: 5%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-    .body .sobre-mi .deco3-3 {
-      bottom: -5%;
-      left: 0;
-      transform: translate(-50%, -50%);
-      transform: rotate(-180deg); }
+    gap: 10rem;
+    overflow: hidden; }
     .body .sobre-mi .container {
       display: flex;
       justify-content: center;
@@ -423,6 +419,9 @@ ul {
           height: 45rem;
           background-color: #A09082;
           z-index: 2; }
+          .body .sobre-mi .container .fotos .foto1 img {
+            width: 100%;
+            height: 100%; }
         .body .sobre-mi .container .fotos .otras-fotos {
           display: flex;
           gap: 2rem; }
@@ -431,6 +430,9 @@ ul {
             width: 30rem;
             height: 25rem;
             background-color: #A09082; }
+            .body .sobre-mi .container .fotos .otras-fotos .foto img {
+              width: 100%;
+              height: 100%; }
       .body .sobre-mi .container .descripcion {
         display: flex;
         flex-direction: column;
@@ -447,7 +449,17 @@ ul {
     min-height: 100vh;
     background-color: #FFF5EC;
     display: flex;
-    justify-content: center; }
+    justify-content: center;
+    overflow: hidden;
+    /*----------------*/
+    /*  SCALLOP down    */
+    /*----------------*/ }
+    .body .post-instagram .scallop-down {
+      height: 100px;
+      width: 100%;
+      background-image: radial-gradient(50px at 50% 0, #FFCDD0, #FFCDD0 49%, #ffffff00 51%, #ffffff00);
+      background-size: 49px 100%;
+      position: absolute; }
     .body .post-instagram .container {
       display: flex;
       flex-direction: column;
@@ -481,12 +493,17 @@ ul {
         .body .post-instagram .container .post .segundo-post {
           width: calc(100% / 4);
           height: 100%;
-          background-color: #A09082; }
+          position: relative; }
+          .body .post-instagram .container .post .segundo-post img {
+            width: 100%;
+            height: 100%; }
           .body .post-instagram .container .post .segundo-post .segundo-post-texto {
             width: 100%;
             height: 30%;
             background-color: #F2E1D2;
-            padding: 2rem; }
+            padding: 2rem;
+            position: absolute;
+            top: 0; }
             .body .post-instagram .container .post .segundo-post .segundo-post-texto span {
               font-size: 1.8em; }
         .body .post-instagram .container .post .tercer-post {
@@ -494,6 +511,9 @@ ul {
           width: calc(100% / 4);
           height: 100%;
           background-color: #F2E1D2; }
+          .body .post-instagram .container .post .tercer-post img {
+            width: 100%;
+            height: 100%; }
         .body .post-instagram .container .post .cuarto-post {
           width: calc(100% / 4);
           height: 100%;
@@ -530,7 +550,8 @@ ul {
     min-height: 100vh;
     background-color: #D6EFE9;
     display: flex;
-    gap: 2rem; }
+    gap: 2rem;
+    overflow: hidden; }
     .body .ebooks .container {
       display: flex;
       gap: 2rem; }
@@ -560,6 +581,9 @@ ul {
           height: 40rem;
           width: 40rem;
           position: relative; }
+          .body .ebooks .container .contenedor-ebooks .ebook img {
+            width: 100%;
+            height: 100%; }
           .body .ebooks .container .contenedor-ebooks .ebook::before {
             content: '';
             position: absolute;
@@ -600,7 +624,8 @@ ul {
   .body .kits {
     width: 100%;
     min-height: 100vh;
-    background-color: #FFF5EC; }
+    background-color: #FFF5EC;
+    overflow: hidden; }
     .body .kits .container {
       display: flex;
       align-items: center;
@@ -652,12 +677,25 @@ ul {
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    gap: 5rem; }
+    gap: 5rem;
+    overflow: hidden;
+    position: relative;
+    /*----------------*/
+    /*  SCALLOP up    */
+    /*----------------*/ }
     .body .puntos-venta .img {
       content: '';
       width: 50rem;
       height: 50rem;
       background-color: #A09082; }
+    .body .puntos-venta .scallop-up {
+      position: absolute;
+      height: 100px;
+      width: 100%;
+      background-image: radial-gradient(50px at 50% 100%, #F2E1D2, #F2E1D2 49%, #ffffff00 51%, #ffffff00);
+      background-size: 49px 100%;
+      bottom: 0;
+      z-index: 2; }
     .body .puntos-venta .titulo-puntos {
       display: flex;
       flex-direction: column;
@@ -677,19 +715,8 @@ ul {
     position: relative;
     display: flex;
     justify-content: center;
-    align-items: center; }
-    .body .footer .deco-footer {
-      position: absolute;
-      width: 100%;
-      height: 13rem;
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      pointer-events: none;
-      z-index: 0; }
-      .body .footer .deco-footer img {
-        width: 100%;
-        height: 100%; }
+    align-items: center;
+    overflow: hidden; }
     .body .footer .container {
       display: flex;
       justify-content: center;

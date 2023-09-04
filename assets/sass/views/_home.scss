@@ -22,7 +22,6 @@
             opacity: 0.5;
         }
 
-
         .frase {
             position: absolute;
             top: 50%;
@@ -135,6 +134,18 @@
                 }
             }
         }
+
+        /*----------------*/
+        /*  SCALLOP up    */
+        /*----------------*/
+        .scallop-up {
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            background-image: radial-gradient(50px at 50% 100%, #FFF5EC, #FFF5EC 49%, #ffffff00 51%, #ffffff00);
+            background-size: 49px 100%;
+            bottom:0;
+        }
     }
 
     /*Novedades*/
@@ -146,22 +157,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-
-        .deco {
-            position: absolute;
-            width: 100%;
-            height: 13rem;
-            top: 5%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 0;
-
-            img {
-                width: 100%;
-                height: 100%
-            }
-        }
+        overflow: hidden;
 
         .container {
             display: flex;
@@ -215,6 +211,7 @@
         justify-content: center;
         flex-direction: column;
         align-items: center;
+        overflow: hidden;
 
         .deco2,
         .deco2-2 {
@@ -304,6 +301,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
 
         .container {
 
@@ -393,6 +391,7 @@
         justify-content: center;
         align-items: center;
         position: relative;
+        overflow: hidden;
 
         &::after {
             content: '';
@@ -406,10 +405,24 @@
             transform: translate(-50%, -50%);
         }
 
+        /*----------------*/
+        /*  SCALLOP up    */
+        /*----------------*/
+        .scallop-up {
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            background-image: radial-gradient(50px at 50% 100%, #FFCDD0, #FFCDD0 49%, #ffffff00 51%, #ffffff00);
+            background-size: 49px 100%;
+            bottom:0;
+            z-index: 2;
+        }
+
         .container {
             display: flex;
-            gap: 20rem;
+            gap: 10rem;
             z-index: 2;
+            padding: 0 5rem 0 5rem;
 
             .titulo-tips {
                 display: flex;
@@ -471,33 +484,7 @@
         justify-content: center;
         align-items: center;
         gap: 10rem;
-
-        .deco3,
-        .deco3-3 {
-            position: absolute;
-            width: 100%;
-            height: 13rem;
-            pointer-events: none;
-            z-index: 0;
-
-            img {
-                width: 100%;
-                height: 100%
-            }
-        }
-
-        .deco3 {
-            top: 5%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .deco3-3 {
-            bottom: -5%;
-            left: 0;
-            transform: translate(-50%, -50%);
-            transform: rotate(-180deg);
-        }
+        overflow: hidden;
 
         .container {
             display: flex;
@@ -518,6 +505,11 @@
                     height: 45rem;
                     background-color: $marron;
                     z-index: 2;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 .otras-fotos {
@@ -529,6 +521,11 @@
                         width: 30rem;
                         height: 25rem;
                         background-color: $marron;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
                 }
             }
@@ -559,7 +556,19 @@
         background-color: $cremita;
         display: flex;
         justify-content: center;
-   
+        overflow: hidden;
+
+        /*----------------*/
+        /*  SCALLOP down    */
+        /*----------------*/
+        .scallop-down {
+            height: 100px;
+            width: 100%;
+            background-image: radial-gradient(50px at 50% 0, #FFCDD0, #FFCDD0 49%, #ffffff00 51%, #ffffff00);
+            background-size: 49px 100%;
+            position: absolute;
+        }
+
         .container {
             display: flex;
             flex-direction: column;
@@ -605,13 +614,20 @@
                 .segundo-post {
                     width: calc(100% / 4);
                     height: 100%;
-                    background-color: $marron;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
 
                     .segundo-post-texto {
                         width: 100%;
                         height: 30%;
                         background-color: $beige;
                         padding: 2rem;
+                        position: absolute;
+                        top: 0;
 
                         span {
                             font-size: 1.8em;
@@ -624,6 +640,11 @@
                     width: calc(100% / 4);
                     height: 100%;
                     background-color: $beige;
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
                 }
 
                 .cuarto-post {
@@ -681,8 +702,9 @@
         background-color: $verde-claro;
         display: flex;
         gap: 2rem;
+        overflow: hidden;
 
-        .container{
+        .container {
             display: flex;
             gap: 2rem;
 
@@ -695,31 +717,36 @@
                 flex-direction: column;
                 justify-content: center;
                 align-items: center;
-    
+
                 h2 {
                     font-size: 2.5em;
                     padding-bottom: 2rem;
                 }
-    
+
                 p {
                     font-size: 1.8em;
                 }
             }
-    
+
             .contenedor-ebooks {
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
                 gap: 2rem;
                 padding: 2rem 0 2rem 0;
-    
+
                 .ebook {
                     content: '';
                     background-color: $beige;
                     height: 40rem;
                     width: 40rem;
                     position: relative;
-    
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                    }
+
                     &::before {
                         content: '';
                         position: absolute;
@@ -731,15 +758,15 @@
                         transform-origin: bottom;
                         transition: height 0.3s ease-in-out;
                     }
-    
+
                     &:hover::before {
                         height: 40%;
                     }
-    
+
                     &:hover .botones-ebook {
                         opacity: 1;
                     }
-    
+
                     .botones-ebook {
                         position: absolute;
                         top: 80%;
@@ -748,7 +775,7 @@
                         cursor: pointer;
                         opacity: 0;
                         transition: .4s ease-in-out;
-    
+
                         .btn-comprar {
                             width: 20rem;
                             height: 5rem;
@@ -761,7 +788,7 @@
                             border: 2px solid $marron;
                             border-radius: 100px;
                             transition: .3s ease-in-out;
-    
+
                             &:hover {
                                 background-color: $rosa;
                                 color: $cremita;
@@ -778,8 +805,9 @@
         width: 100%;
         min-height: 100vh;
         background-color: $cremita;
+        overflow: hidden;
 
-        .container{
+        .container {
             display: flex;
             align-items: center;
             justify-content: space-around;
@@ -788,20 +816,20 @@
 
             .titulo-kits {
                 width: 30%;
-    
+
                 .titulos-kits {
                     h2 {
                         font-size: 2.5em;
                     }
-    
+
                     .links-kits {
                         display: flex;
                         flex-direction: column;
-    
+
                         a {
                             font-size: 1.8em;
                             cursor: pointer;
-    
+
                             &:hover {
                                 font-weight: 600;
                             }
@@ -809,7 +837,7 @@
                     }
                 }
             }
-    
+
             .productos-kits {
                 width: 100%;
                 display: grid;
@@ -818,7 +846,7 @@
                 gap: 20px;
                 padding: 20px;
                 grid-auto-flow: dense;
-    
+
                 .kit {
                     display: flex;
                     align-items: center;
@@ -828,12 +856,12 @@
                     background-repeat: no-repeat;
                     border-radius: 4px;
                     transition: transform .3s ease-in-out;
-    
+
                     &:hover {
                         transform: scale(1.1);
                     }
                 }
-    
+
                 .img1,
                 .img2,
                 .img3,
@@ -855,12 +883,27 @@
         justify-content: center;
         align-items: center;
         gap: 5rem;
+        overflow: hidden;
+        position: relative;
 
         .img {
             content: '';
             width: 50rem;
             height: 50rem;
             background-color: $marron;
+        }
+
+        /*----------------*/
+        /*  SCALLOP up    */
+        /*----------------*/
+        .scallop-up {
+            position: absolute;
+            height: 100px;
+            width: 100%;
+            background-image: radial-gradient(50px at 50% 100%, #F2E1D2, #F2E1D2 49%, #ffffff00 51%, #ffffff00);
+            background-size: 49px 100%;
+            bottom:0;
+            z-index: 2;
         }
 
         .titulo-puntos {
@@ -893,24 +936,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        overflow: hidden;
 
-        .deco-footer {
-            position: absolute;
-            width: 100%;
-            height: 13rem;
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            pointer-events: none;
-            z-index: 0;
-
-            img {
-                width: 100%;
-                height: 100%
-            }
-        }
-
-        .container{
+        .container {
             display: flex;
             justify-content: center;
             align-items: center;
@@ -918,7 +946,7 @@
             position: absolute;
             justify-content: space-between;
             padding: 0 5rem 0 5rem;
-            gap:35rem;
+            gap: 35rem;
 
             .descripcion-footer {
                 width: 350px;
@@ -976,6 +1004,7 @@
         }
     }
 
+    /*BOTONES*/
     /*btn scroll*/
     .scroll-top-button {
         position: fixed;
