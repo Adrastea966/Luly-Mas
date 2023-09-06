@@ -142,9 +142,9 @@
             position: absolute;
             height: 100px;
             width: 100%;
-            background-image: radial-gradient(50px at 50% 100%, #FFF5EC, #FFF5EC 49%, #ffffff00 51%, #ffffff00);
+            background-image: radial-gradient(60px at 50% 100%, #FFF5EC, #FFF5EC 49%, #ffffff00 51%, #ffffff00);
             background-size: 49px 100%;
-            bottom:0;
+            bottom: 0;
         }
     }
 
@@ -213,30 +213,6 @@
         align-items: center;
         overflow: hidden;
 
-        .deco2,
-        .deco2-2 {
-            width: 30rem;
-            height: 0.8rem;
-            position: absolute;
-
-            img {
-                width: 100%;
-                height: 100%;
-            }
-        }
-
-        .deco2 {
-            top: 0;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .deco2-2 {
-            bottom: -1%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
         .container {
 
             .porque {
@@ -261,7 +237,7 @@
             .iconos {
                 display: flex;
                 gap: 10rem;
-                padding-top: 10rem;
+                padding: 10rem 0 0 0;
 
                 .buena-atencion,
                 .precios,
@@ -303,26 +279,40 @@
         align-items: center;
         overflow: hidden;
 
-        .container {
+        h2 {
+            font-size: 2.5em;
+            padding-bottom: 2rem;
+            padding: 0 0 0 5rem;
+        }
 
-            h2 {
-                font-size: 2.5em;
-                padding-bottom: 2rem;
-            }
+        .tarjetas-productos {
+            height: 50rem;
+            max-width: 120rem;
+            padding: 2rem 10rem 0 5rem;
+            display: flex;
+            justify-content: space-between;
+            gap: 4rem;
+            flex-wrap: wrap;
+            position: relative;
+            z-index: 1;
 
-            .tarjetas-productos {
-                display: flex;
-                gap: 2rem;
+            .tarjeta1,
+            .tarjeta2,
+            .tarjeta3,
+            .tarjeta4,
+            .tarjeta5,
+            .tarjeta6 {
+                position: relative;
+                margin-right: 2rem;
 
                 .tarjeta-producto {
-                    width: 35rem;
-                    height: 45rem;
+                    width: 100%;
+                    height: 40rem;
+                    background-color: $cremita;
+                    overflow: hidden;
+                    transition: transform 0.3s ease-in-out;
+                    transition: 0.3s ease-in-out;
                     position: relative;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
 
                     &::before {
                         content: '';
@@ -356,7 +346,10 @@
                         opacity: 0;
                         transition: .4s ease-in-out;
 
-                        .btn-tuto,
+                        p {
+                            font-size: 1.8em;
+                        }
+
                         .btn-comprar {
                             width: 20rem;
                             height: 5rem;
@@ -376,7 +369,36 @@
                             }
                         }
                     }
+
+                    img {
+                        width: 100%;
+                        object-fit: cover;
+                    }
                 }
+            }
+
+            .slick-arrow {
+                width: 30px;
+                height: 30px;
+                font-size: 1px;
+                color: transparent;
+                position: absolute;
+                border: 1px solid rgba(255, 255, 255, 0);
+                top: -60px;
+                right: 2%;
+                cursor: pointer;
+            }
+
+            .slick-prev {
+                right: 5%;
+                background: url('../../assets/image/angle-left.svg');
+                background-size: 100%;
+                color: $marron;
+            }
+
+            .slick-next {
+                background: url('../../assets/image/angle-right.svg');
+                background-size: 100%;
             }
         }
     }
@@ -414,7 +436,7 @@
             width: 100%;
             background-image: radial-gradient(50px at 50% 100%, #FFCDD0, #FFCDD0 49%, #ffffff00 51%, #ffffff00);
             background-size: 49px 100%;
-            bottom:0;
+            bottom: 0;
             z-index: 2;
         }
 
@@ -902,7 +924,7 @@
             width: 100%;
             background-image: radial-gradient(50px at 50% 100%, #F2E1D2, #F2E1D2 49%, #ffffff00 51%, #ffffff00);
             background-size: 49px 100%;
-            bottom:0;
+            bottom: 0;
             z-index: 2;
         }
 
@@ -937,6 +959,7 @@
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        padding: 0 10rem 0 10rem;
 
         .container {
             display: flex;
@@ -945,7 +968,6 @@
             flex-direction: row;
             position: absolute;
             justify-content: space-between;
-            padding: 0 5rem 0 5rem;
             gap: 35rem;
 
             .descripcion-footer {
@@ -1047,6 +1069,225 @@
 }
 
 /*Media querys*/
+/*PANTALLAS GRANDES*/
+@media (max-width:1190px) {
+
+    .body {
+
+        /*MAIN*/
+        .main {
+
+            .frase {
+
+                h2 {
+                    font-size: 8em;
+                }
+            }
+        }
+
+        /*NOVEDADES*/
+        .novedades {
+            width: 100%;
+            height: 110rem;
+        }
+
+        /*MOTIVOS*/
+        .motivos {
+    
+            .container {
+               
+                .porque {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    h2 {
+                        font-size: 2.5em;
+                    }
+
+                    h3 {
+                        font-size: 1.8em;
+                        width: 50rem;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                }
+
+                .iconos {
+                    display: flex;
+                    gap: 2rem;
+                }
+            }
+        }
+
+        /*TUTORIALES*/
+        .tutoriales {
+            width: 100%;
+            height: 110rem;
+
+            .container {
+                display: flex;
+                flex-direction: column;
+
+                .titulo-tips {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+
+                    .tips-tutoriales {
+
+                        h3 {
+                            padding-top: 3rem;
+                        }
+
+                        span {
+                            font-size: 1.8em;
+                        }
+                    }
+                }
+
+                .videos {
+                    content: '';
+                    width: 50rem;
+                    height: 50rem;
+                    background-color: $marron;
+                }
+            }
+        }
+
+        /*DESTACADOS*/
+        .destacados {
+
+            .tarjetas-productos {
+
+                padding: 2rem 20rem 0 5rem;
+
+                .slick-prev {
+                    right: 20%;
+                }
+
+                .slick-next {
+                    right: 17%;
+                }
+            }
+        }
+
+        /*SOBRE MÍ*/
+        .sobre-mi {
+            height: 130rem;
+
+            .container {
+                flex-direction: column-reverse;
+                gap: 2rem;
+
+                .descripcion {
+                    width: 60%;
+                }
+
+                .fotos {
+                    padding-left: 0;
+                    padding-top: 10rem;
+                }
+            }
+        }
+
+        /*EBOOKS*/
+        .ebooks {
+
+            .container {
+                flex-direction: column;
+
+                .descripcion-ebooks {
+                    min-height: 50vh;
+                    width: 100%;
+                }
+
+                .contenedor-ebooks {
+                    display: flex;
+                    justify-content: center;
+                    flex-wrap: wrap;
+                    gap: 2rem;
+                    padding: 2rem 0 2rem 0;
+
+                    .ebook {
+                        content: '';
+                        background-color: $beige;
+                        height: 40rem;
+                        width: 40rem;
+                        position: relative;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &::before {
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 0;
+                            background-color: $verde;
+                            transform-origin: bottom;
+                            transition: height 0.3s ease-in-out;
+                        }
+
+                        &:hover::before {
+                            height: 40%;
+                        }
+
+                        &:hover .botones-ebook {
+                            opacity: 1;
+                        }
+
+                        .botones-ebook {
+                            position: absolute;
+                            top: 80%;
+                            left: 50%;
+                            transform: translate(-50%, -50%);
+                            cursor: pointer;
+                            opacity: 0;
+                            transition: .4s ease-in-out;
+
+                            .btn-comprar {
+                                width: 20rem;
+                                height: 5rem;
+                                background-color: $blanco;
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                font-size: 1.5em;
+                                font-weight: 500;
+                                border: 2px solid $marron;
+                                border-radius: 100px;
+                                transition: .3s ease-in-out;
+
+                                &:hover {
+                                    background-color: $rosa;
+                                    color: $cremita;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        /*FOOTER*/
+        .footer {
+
+            .container {
+                gap: 10rem;
+            }
+        }
+    }
+}
+
+
+/*PANTALLAS PEQUEÑAS*/
 @media (min-width: 600px) {
     .wide {
         grid-column: span 2;

@@ -156,7 +156,7 @@ ul {
       position: absolute;
       height: 100px;
       width: 100%;
-      background-image: radial-gradient(50px at 50% 100%, #FFF5EC, #FFF5EC 49%, #ffffff00 51%, #ffffff00);
+      background-image: radial-gradient(60px at 50% 100%, #FFF5EC, #FFF5EC 49%, #ffffff00 51%, #ffffff00);
       background-size: 49px 100%;
       bottom: 0; }
   .body .novedades {
@@ -207,23 +207,6 @@ ul {
     flex-direction: column;
     align-items: center;
     overflow: hidden; }
-    .body .motivos .deco2,
-    .body .motivos .deco2-2 {
-      width: 30rem;
-      height: 0.8rem;
-      position: absolute; }
-      .body .motivos .deco2 img,
-      .body .motivos .deco2-2 img {
-        width: 100%;
-        height: 100%; }
-    .body .motivos .deco2 {
-      top: 0;
-      left: 50%;
-      transform: translate(-50%, -50%); }
-    .body .motivos .deco2-2 {
-      bottom: -1%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
     .body .motivos .container .porque {
       display: flex;
       justify-content: center;
@@ -240,7 +223,7 @@ ul {
     .body .motivos .container .iconos {
       display: flex;
       gap: 10rem;
-      padding-top: 10rem; }
+      padding: 10rem 0 0 0; }
       .body .motivos .container .iconos .buena-atencion,
       .body .motivos .container .iconos .precios,
       .body .motivos .container .iconos .calidad {
@@ -274,61 +257,144 @@ ul {
     justify-content: center;
     align-items: center;
     overflow: hidden; }
-    .body .destacados .container h2 {
+    .body .destacados h2 {
       font-size: 2.5em;
-      padding-bottom: 2rem; }
-    .body .destacados .container .tarjetas-productos {
+      padding-bottom: 2rem;
+      padding: 0 0 0 5rem; }
+    .body .destacados .tarjetas-productos {
+      height: 50rem;
+      max-width: 120rem;
+      padding: 2rem 10rem 0 5rem;
       display: flex;
-      gap: 2rem; }
-      .body .destacados .container .tarjetas-productos .tarjeta-producto {
-        width: 35rem;
-        height: 45rem;
-        position: relative; }
-        .body .destacados .container .tarjetas-productos .tarjeta-producto img {
+      justify-content: space-between;
+      gap: 4rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 1; }
+      .body .destacados .tarjetas-productos .tarjeta1,
+      .body .destacados .tarjetas-productos .tarjeta2,
+      .body .destacados .tarjetas-productos .tarjeta3,
+      .body .destacados .tarjetas-productos .tarjeta4,
+      .body .destacados .tarjetas-productos .tarjeta5,
+      .body .destacados .tarjetas-productos .tarjeta6 {
+        position: relative;
+        margin-right: 2rem; }
+        .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto,
+        .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto,
+        .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto,
+        .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto,
+        .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto,
+        .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto {
           width: 100%;
-          height: 100%; }
-        .body .destacados .container .tarjetas-productos .tarjeta-producto::before {
-          content: '';
-          position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 0;
-          background-color: #F2E1D2;
-          transform-origin: bottom;
-          transition: height 0.3s ease-in-out; }
-        .body .destacados .container .tarjetas-productos .tarjeta-producto:hover::before {
-          height: 40%; }
-        .body .destacados .container .tarjetas-productos .tarjeta-producto:hover .botones {
-          opacity: 1; }
-        .body .destacados .container .tarjetas-productos .tarjeta-producto .botones {
-          display: flex;
-          flex-direction: column;
-          gap: 1rem;
-          position: absolute;
-          top: 80%;
-          left: 50%;
-          transform: translate(-50%, -50%);
-          cursor: pointer;
-          opacity: 0;
-          transition: .4s ease-in-out; }
-          .body .destacados .container .tarjetas-productos .tarjeta-producto .botones .btn-tuto,
-          .body .destacados .container .tarjetas-productos .tarjeta-producto .botones .btn-comprar {
-            width: 20rem;
-            height: 5rem;
-            background-color: #fff;
+          height: 40rem;
+          background-color: #FFF5EC;
+          overflow: hidden;
+          transition: transform 0.3s ease-in-out;
+          transition: 0.3s ease-in-out;
+          position: relative; }
+          .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto::before,
+          .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto::before,
+          .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto::before,
+          .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto::before,
+          .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto::before,
+          .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: #F2E1D2;
+            transform-origin: bottom;
+            transition: height 0.3s ease-in-out; }
+          .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto:hover::before,
+          .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto:hover::before,
+          .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto:hover::before,
+          .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto:hover::before,
+          .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto:hover::before,
+          .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto:hover::before {
+            height: 40%; }
+          .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto:hover .botones,
+          .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto:hover .botones,
+          .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto:hover .botones,
+          .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto:hover .botones,
+          .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto:hover .botones,
+          .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto:hover .botones {
+            opacity: 1; }
+          .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto .botones,
+          .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto .botones,
+          .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto .botones,
+          .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto .botones,
+          .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto .botones,
+          .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto .botones {
             display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5em;
-            font-weight: 500;
-            border: 2px solid #A09082;
-            border-radius: 100px;
-            transition: .3s ease-in-out; }
-            .body .destacados .container .tarjetas-productos .tarjeta-producto .botones .btn-tuto:hover,
-            .body .destacados .container .tarjetas-productos .tarjeta-producto .botones .btn-comprar:hover {
-              background-color: #FF9CA2;
-              color: #FFF5EC; }
+            flex-direction: column;
+            gap: 1rem;
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            opacity: 0;
+            transition: .4s ease-in-out; }
+            .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto .botones p,
+            .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto .botones p,
+            .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto .botones p,
+            .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto .botones p,
+            .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto .botones p,
+            .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto .botones p {
+              font-size: 1.8em; }
+            .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto .botones .btn-comprar,
+            .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto .botones .btn-comprar,
+            .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto .botones .btn-comprar,
+            .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto .botones .btn-comprar,
+            .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto .botones .btn-comprar,
+            .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto .botones .btn-comprar {
+              width: 20rem;
+              height: 5rem;
+              background-color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.5em;
+              font-weight: 500;
+              border: 2px solid #A09082;
+              border-radius: 100px;
+              transition: .3s ease-in-out; }
+              .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto .botones .btn-comprar:hover,
+              .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto .botones .btn-comprar:hover,
+              .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto .botones .btn-comprar:hover,
+              .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto .botones .btn-comprar:hover,
+              .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto .botones .btn-comprar:hover,
+              .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto .botones .btn-comprar:hover {
+                background-color: #FF9CA2;
+                color: #FFF5EC; }
+          .body .destacados .tarjetas-productos .tarjeta1 .tarjeta-producto img,
+          .body .destacados .tarjetas-productos .tarjeta2 .tarjeta-producto img,
+          .body .destacados .tarjetas-productos .tarjeta3 .tarjeta-producto img,
+          .body .destacados .tarjetas-productos .tarjeta4 .tarjeta-producto img,
+          .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto img,
+          .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto img {
+            width: 100%;
+            object-fit: cover; }
+      .body .destacados .tarjetas-productos .slick-arrow {
+        width: 30px;
+        height: 30px;
+        font-size: 1px;
+        color: transparent;
+        position: absolute;
+        border: 1px solid rgba(255, 255, 255, 0);
+        top: -60px;
+        right: 2%;
+        cursor: pointer; }
+      .body .destacados .tarjetas-productos .slick-prev {
+        right: 5%;
+        background: url("../../assets/image/angle-left.svg");
+        background-size: 100%;
+        color: #A09082; }
+      .body .destacados .tarjetas-productos .slick-next {
+        background: url("../../assets/image/angle-right.svg");
+        background-size: 100%; }
   .body .tutoriales {
     width: 100%;
     min-height: 100vh;
@@ -716,7 +782,8 @@ ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0 10rem 0 10rem; }
     .body .footer .container {
       display: flex;
       justify-content: center;
@@ -724,7 +791,6 @@ ul {
       flex-direction: row;
       position: absolute;
       justify-content: space-between;
-      padding: 0 5rem 0 5rem;
       gap: 35rem; }
       .body .footer .container .descripcion-footer {
         width: 350px; }
@@ -789,6 +855,134 @@ ul {
     transform: translateY(0); } }
 
 /*Media querys*/
+/*PANTALLAS GRANDES*/
+@media (max-width: 1190px) {
+  .body {
+    /*MAIN*/
+    /*NOVEDADES*/
+    /*MOTIVOS*/
+    /*TUTORIALES*/
+    /*DESTACADOS*/
+    /*SOBRE MÍ*/
+    /*EBOOKS*/
+    /*FOOTER*/ }
+    .body .main .frase h2 {
+      font-size: 8em; }
+    .body .novedades {
+      width: 100%;
+      height: 110rem; }
+    .body .motivos .container .porque {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.5rem; }
+      .body .motivos .container .porque h2 {
+        font-size: 2.5em; }
+      .body .motivos .container .porque h3 {
+        font-size: 1.8em;
+        width: 50rem;
+        font-weight: 400;
+        text-align: center; }
+    .body .motivos .container .iconos {
+      display: flex;
+      gap: 2rem; }
+    .body .tutoriales {
+      width: 100%;
+      height: 110rem; }
+      .body .tutoriales .container {
+        display: flex;
+        flex-direction: column; }
+        .body .tutoriales .container .titulo-tips {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between; }
+          .body .tutoriales .container .titulo-tips .tips-tutoriales h3 {
+            padding-top: 3rem; }
+          .body .tutoriales .container .titulo-tips .tips-tutoriales span {
+            font-size: 1.8em; }
+        .body .tutoriales .container .videos {
+          content: '';
+          width: 50rem;
+          height: 50rem;
+          background-color: #A09082; }
+    .body .destacados .tarjetas-productos {
+      padding: 2rem 20rem 0 5rem; }
+      .body .destacados .tarjetas-productos .slick-prev {
+        right: 20%; }
+      .body .destacados .tarjetas-productos .slick-next {
+        right: 17%; }
+    .body .sobre-mi {
+      height: 130rem; }
+      .body .sobre-mi .container {
+        flex-direction: column-reverse;
+        gap: 2rem; }
+        .body .sobre-mi .container .descripcion {
+          width: 60%; }
+        .body .sobre-mi .container .fotos {
+          padding-left: 0;
+          padding-top: 10rem; }
+    .body .ebooks .container {
+      flex-direction: column; }
+      .body .ebooks .container .descripcion-ebooks {
+        min-height: 50vh;
+        width: 100%; }
+      .body .ebooks .container .contenedor-ebooks {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem 0 2rem 0; }
+        .body .ebooks .container .contenedor-ebooks .ebook {
+          content: '';
+          background-color: #F2E1D2;
+          height: 40rem;
+          width: 40rem;
+          position: relative; }
+          .body .ebooks .container .contenedor-ebooks .ebook img {
+            width: 100%;
+            height: 100%; }
+          .body .ebooks .container .contenedor-ebooks .ebook::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: #ACEBDC;
+            transform-origin: bottom;
+            transition: height 0.3s ease-in-out; }
+          .body .ebooks .container .contenedor-ebooks .ebook:hover::before {
+            height: 40%; }
+          .body .ebooks .container .contenedor-ebooks .ebook:hover .botones-ebook {
+            opacity: 1; }
+          .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook {
+            position: absolute;
+            top: 80%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            cursor: pointer;
+            opacity: 0;
+            transition: .4s ease-in-out; }
+            .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook .btn-comprar {
+              width: 20rem;
+              height: 5rem;
+              background-color: #fff;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              font-size: 1.5em;
+              font-weight: 500;
+              border: 2px solid #A09082;
+              border-radius: 100px;
+              transition: .3s ease-in-out; }
+              .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook .btn-comprar:hover {
+                background-color: #FF9CA2;
+                color: #FFF5EC; }
+    .body .footer .container {
+      gap: 10rem; } }
+
+/*PANTALLAS PEQUEÑAS*/
 @media (min-width: 600px) {
   .wide {
     grid-column: span 2; }
