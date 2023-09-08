@@ -74,6 +74,7 @@ ul {
       opacity: 0.5; }
     .body .main .frase {
       position: absolute;
+      width: 100%;
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -250,27 +251,45 @@ ul {
   .body .destacados {
     width: 100%;
     min-height: 100vh;
-    margin: 0 auto;
     background-color: #FFF5EC;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden; }
+    overflow: hidden;
+    padding: 0 2rem 0 2rem; }
     .body .destacados h2 {
       font-size: 2.5em;
-      padding-bottom: 2rem;
-      padding: 0 0 0 5rem; }
+      padding: 0 0 2rem 0; }
     .body .destacados .tarjetas-productos {
       height: 50rem;
       max-width: 120rem;
-      padding: 2rem 10rem 0 5rem;
+      padding-bottom: 7rem;
       display: flex;
       justify-content: space-between;
       gap: 4rem;
       flex-wrap: wrap;
       position: relative;
-      z-index: 1; }
+      z-index: 1;
+      padding: 0 5rem 0 0; }
+      .body .destacados .tarjetas-productos .slick-arrow {
+        width: 35px;
+        height: 35px;
+        font-size: 1px;
+        color: transparent;
+        border: 1px solid #A09082;
+        position: absolute;
+        top: -8%;
+        left: 35%;
+        transform: translate(-50%, -50%);
+        cursor: pointer; }
+      .body .destacados .tarjetas-productos .slick-prev {
+        left: 30%;
+        background: url("../../assets/image/angle-left.svg");
+        background-size: 100%; }
+      .body .destacados .tarjetas-productos .slick-next {
+        background: url("../../assets/image/angle-right.svg");
+        background-size: 100%; }
       .body .destacados .tarjetas-productos .tarjeta1,
       .body .destacados .tarjetas-productos .tarjeta2,
       .body .destacados .tarjetas-productos .tarjeta3,
@@ -286,7 +305,7 @@ ul {
         .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto,
         .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto {
           width: 100%;
-          height: 40rem;
+          height: 50rem;
           background-color: #FFF5EC;
           overflow: hidden;
           transition: transform 0.3s ease-in-out;
@@ -376,25 +395,8 @@ ul {
           .body .destacados .tarjetas-productos .tarjeta5 .tarjeta-producto img,
           .body .destacados .tarjetas-productos .tarjeta6 .tarjeta-producto img {
             width: 100%;
+            height: 100%;
             object-fit: cover; }
-      .body .destacados .tarjetas-productos .slick-arrow {
-        width: 30px;
-        height: 30px;
-        font-size: 1px;
-        color: transparent;
-        position: absolute;
-        border: 1px solid rgba(255, 255, 255, 0);
-        top: -60px;
-        right: 2%;
-        cursor: pointer; }
-      .body .destacados .tarjetas-productos .slick-prev {
-        right: 5%;
-        background: url("../../assets/image/angle-left.svg");
-        background-size: 100%;
-        color: #A09082; }
-      .body .destacados .tarjetas-productos .slick-next {
-        background: url("../../assets/image/angle-right.svg");
-        background-size: 100%; }
   .body .tutoriales {
     width: 100%;
     min-height: 100vh;
@@ -516,10 +518,7 @@ ul {
     background-color: #FFF5EC;
     display: flex;
     justify-content: center;
-    overflow: hidden;
-    /*----------------*/
-    /*  SCALLOP down    */
-    /*----------------*/ }
+    overflow: hidden; }
     .body .post-instagram .scallop-down {
       height: 100px;
       width: 100%;
@@ -543,74 +542,67 @@ ul {
           font-size: 1.8em; }
       .body .post-instagram .container .post {
         width: 100%;
-        height: 50rem;
         padding: 0 8rem 0 8rem;
-        display: flex; }
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap; }
+        .body .post-instagram .container .post .primer-post,
+        .body .post-instagram .container .post .segundo-post,
+        .body .post-instagram .container .post .tercer-post,
+        .body .post-instagram .container .post .cuarto-post {
+          width: calc(25%); }
         .body .post-instagram .container .post .primer-post {
-          width: calc(100% / 4);
+          background-color: #F2E1D2;
+          display: flex;
+          align-items: center;
+          font-size: 1.8em;
+          padding: 2rem; }
+        .body .post-instagram .container .post .segundo-post {
+          position: relative; }
+        .body .post-instagram .container .post .cuarto-post {
+          background-color: #A09082;
+          color: #FFF5EC; }
+        .body .post-instagram .container .post .primer-post,
+        .body .post-instagram .container .post .segundo-post,
+        .body .post-instagram .container .post .tercer-post {
+          height: 45rem; }
+        .body .post-instagram .container .post img {
+          width: 100%;
           height: 100%;
+          object-fit: cover; }
+        .body .post-instagram .container .post .segundo-post-texto {
+          width: 100%;
+          height: 30%;
           background-color: #F2E1D2;
           padding: 2rem;
-          display: flex;
-          justify-content: center;
-          align-items: center; }
-          .body .post-instagram .container .post .primer-post span {
+          position: absolute;
+          top: 0; }
+          .body .post-instagram .container .post .segundo-post-texto span {
             font-size: 1.8em; }
-        .body .post-instagram .container .post .segundo-post {
-          width: calc(100% / 4);
-          height: 100%;
-          position: relative; }
-          .body .post-instagram .container .post .segundo-post img {
-            width: 100%;
-            height: 100%; }
-          .body .post-instagram .container .post .segundo-post .segundo-post-texto {
-            width: 100%;
-            height: 30%;
-            background-color: #F2E1D2;
-            padding: 2rem;
-            position: absolute;
-            top: 0; }
-            .body .post-instagram .container .post .segundo-post .segundo-post-texto span {
-              font-size: 1.8em; }
-        .body .post-instagram .container .post .tercer-post {
-          content: '';
-          width: calc(100% / 4);
-          height: 100%;
-          background-color: #F2E1D2; }
-          .body .post-instagram .container .post .tercer-post img {
-            width: 100%;
-            height: 100%; }
-        .body .post-instagram .container .post .cuarto-post {
-          width: calc(100% / 4);
-          height: 100%;
-          background-color: #A09082;
-          color: #FFF5EC;
+        .body .post-instagram .container .post p {
+          padding: 2rem;
+          font-size: 1.8em; }
+        .body .post-instagram .container .post .top {
           display: flex;
-          flex-direction: column;
-          justify-content: space-between; }
-          .body .post-instagram .container .post .cuarto-post p {
-            padding: 2rem;
-            font-size: 1.8em; }
-          .body .post-instagram .container .post .cuarto-post .top {
-            display: flex;
-            gap: 1rem;
-            padding: 2rem; }
-            .body .post-instagram .container .post .cuarto-post .top .circle {
-              content: '';
-              width: 5rem;
-              height: 5rem;
-              border-radius: 100px;
-              background-color: #F2E1D2; }
-            .body .post-instagram .container .post .cuarto-post .top .usuario-ig {
-              font-size: 1.5em; }
-          .body .post-instagram .container .post .cuarto-post .boton-post {
-            padding: 2rem;
-            font-size: 1.5em;
-            display: flex;
-            justify-content: flex-end; }
-            .body .post-instagram .container .post .cuarto-post .boton-post span,
-            .body .post-instagram .container .post .cuarto-post .boton-post i {
-              cursor: pointer; }
+          gap: 1rem;
+          padding: 2rem; }
+          .body .post-instagram .container .post .top .circle {
+            content: '';
+            width: 5rem;
+            height: 5rem;
+            border-radius: 100px;
+            background-color: #F2E1D2; }
+          .body .post-instagram .container .post .top .usuario-ig {
+            font-size: 1.5em; }
+        .body .post-instagram .container .post .boton-post {
+          padding: 2rem;
+          font-size: 1.5em;
+          display: flex;
+          justify-content: flex-end; }
+          .body .post-instagram .container .post .boton-post span,
+          .body .post-instagram .container .post .boton-post i {
+            cursor: pointer; }
   .body .ebooks {
     width: 100%;
     min-height: 100vh;
@@ -699,12 +691,16 @@ ul {
       gap: 1rem;
       padding: 5rem 10rem 5rem 10rem; }
       .body .kits .container .titulo-kits {
-        width: 30%; }
+        width: 50rem;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
         .body .kits .container .titulo-kits .titulos-kits h2 {
           font-size: 2.5em; }
         .body .kits .container .titulo-kits .titulos-kits .links-kits {
           display: flex;
-          flex-direction: column; }
+          flex-direction: column;
+          width: 100%; }
           .body .kits .container .titulo-kits .titulos-kits .links-kits a {
             font-size: 1.8em;
             cursor: pointer; }
@@ -740,10 +736,11 @@ ul {
     min-height: 100vh;
     background-color: #FFF5EC;
     display: flex;
+    flex-wrap: wrap;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    gap: 5rem;
+    gap: 2rem;
     overflow: hidden;
     position: relative;
     /*----------------*/
@@ -858,16 +855,14 @@ ul {
 /*PANTALLAS GRANDES*/
 @media (max-width: 1190px) {
   .body {
-    /*MAIN*/
     /*NOVEDADES*/
     /*MOTIVOS*/
     /*TUTORIALES*/
     /*DESTACADOS*/
     /*SOBRE MÍ*/
+    /*POST INSTAGRAM*/
     /*EBOOKS*/
     /*FOOTER*/ }
-    .body .main .frase h2 {
-      font-size: 8em; }
     .body .novedades {
       width: 100%;
       height: 110rem; }
@@ -907,11 +902,7 @@ ul {
           height: 50rem;
           background-color: #A09082; }
     .body .destacados .tarjetas-productos {
-      padding: 2rem 20rem 0 5rem; }
-      .body .destacados .tarjetas-productos .slick-prev {
-        right: 20%; }
-      .body .destacados .tarjetas-productos .slick-next {
-        right: 17%; }
+      padding: 0 20rem 0 0; }
     .body .sobre-mi {
       height: 130rem; }
       .body .sobre-mi .container {
@@ -922,6 +913,11 @@ ul {
         .body .sobre-mi .container .fotos {
           padding-left: 0;
           padding-top: 10rem; }
+    .body .post-instagram .container .post .primer-post,
+    .body .post-instagram .container .post .segundo-post,
+    .body .post-instagram .container .post .tercer-post,
+    .body .post-instagram .container .post .cuarto-post {
+      width: calc(40%); }
     .body .ebooks .container {
       flex-direction: column; }
       .body .ebooks .container .descripcion-ebooks {
@@ -933,60 +929,119 @@ ul {
         flex-wrap: wrap;
         gap: 2rem;
         padding: 2rem 0 2rem 0; }
-        .body .ebooks .container .contenedor-ebooks .ebook {
-          content: '';
-          background-color: #F2E1D2;
-          height: 40rem;
-          width: 40rem;
-          position: relative; }
-          .body .ebooks .container .contenedor-ebooks .ebook img {
-            width: 100%;
-            height: 100%; }
-          .body .ebooks .container .contenedor-ebooks .ebook::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background-color: #ACEBDC;
-            transform-origin: bottom;
-            transition: height 0.3s ease-in-out; }
-          .body .ebooks .container .contenedor-ebooks .ebook:hover::before {
-            height: 40%; }
-          .body .ebooks .container .contenedor-ebooks .ebook:hover .botones-ebook {
-            opacity: 1; }
-          .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook {
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            opacity: 0;
-            transition: .4s ease-in-out; }
-            .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook .btn-comprar {
-              width: 20rem;
-              height: 5rem;
-              background-color: #fff;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 1.5em;
-              font-weight: 500;
-              border: 2px solid #A09082;
-              border-radius: 100px;
-              transition: .3s ease-in-out; }
-              .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook .btn-comprar:hover {
-                background-color: #FF9CA2;
-                color: #FFF5EC; }
     .body .footer .container {
       gap: 10rem; } }
 
+/*PANTALLAS MEDIANAS*/
+@media (max-width: 1000px) {
+  .body {
+    /*MOTIVOS*/
+    /*DESTACADOS*/ }
+    .body .motivos .container .porque {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 0.5rem; }
+      .body .motivos .container .porque h2 {
+        font-size: 2.5em; }
+      .body .motivos .container .porque h3 {
+        font-size: 1.8em;
+        width: 50rem;
+        font-weight: 400;
+        text-align: center; }
+    .body .motivos .container .iconos {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap; }
+    .body .destacados .tarjetas-productos {
+      padding: 0 40rem 0 5rem; } }
+
+@media (max-width: 841px) {
+  .body {
+    /*NOVEDADES*/
+    /*TUTORIALES*/
+    /*KITS*/
+    /*DESTACADOS*/
+    /*SOBRE MÍ*/
+    /*POST INSTAGRAM*/
+    /*EBOOKS*/
+    /*FOOTER*/ }
+    .body .novedades {
+      height: 200rem; }
+    .body .tutoriales .container .titulo-tips .tips-tutoriales {
+      width: 40rem; }
+    .body .tutoriales .container .videos {
+      width: 40rem;
+      height: 40rem; }
+    .body .kits .container {
+      flex-direction: column; }
+    .body .destacados .tarjetas-productos {
+      padding: 0 60rem 0 0; }
+    .body .sobre-mi {
+      height: 160rem; }
+      .body .sobre-mi .container {
+        flex-direction: column-reverse;
+        gap: 2rem; }
+        .body .sobre-mi .container .descripcion {
+          width: 40rem; }
+        .body .sobre-mi .container .fotos {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 5rem; }
+          .body .sobre-mi .container .fotos .foto1 {
+            width: 40rem;
+            height: 40rem; }
+          .body .sobre-mi .container .fotos .otras-fotos {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap; }
+    .body .post-instagram .container .post {
+      padding: 0 0 0 0; }
+      .body .post-instagram .container .post .primer-post,
+      .body .post-instagram .container .post .segundo-post,
+      .body .post-instagram .container .post .tercer-post,
+      .body .post-instagram .container .post .cuarto-post {
+        width: calc(60%); }
+    .body .ebooks .container .descripcion-ebooks {
+      padding: 5rem; }
+    .body .footer .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 5rem; }
+      .body .footer .container .nav-footer {
+        padding-right: 27rem; }
+      .body .footer .container .redes-footer {
+        padding-right: 22rem; } }
+
 /*PANTALLAS PEQUEÑAS*/
-@media (min-width: 600px) {
-  .wide {
+@media (max-width: 630px) {
+  .body {
+    /*MAIN*/
+    /*MOTIVOS*/
+    /*DESTACADOS*/ }
+    .body .main .frase h2 {
+      font-size: 7em; }
+    .body .main .frase p {
+      padding: 0 8rem 0 8rem; }
+    .body .motivos .container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; }
+      .body .motivos .container .porque h3 {
+        padding: 0 8rem 0 8rem; }
+    .body .destacados .tarjetas-productos {
+      padding: 0 70rem 0 0; } }
+
+@media (min-width: 800px) {
+  .body .wide {
     grid-column: span 2; }
-  .tall {
+  .body .tall {
     grid-row: span 2; } }
 
 /*HELPERS*/

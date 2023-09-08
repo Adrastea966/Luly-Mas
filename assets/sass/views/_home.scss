@@ -24,6 +24,7 @@
 
         .frase {
             position: absolute;
+            width: 100%;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
@@ -271,30 +272,54 @@
     .destacados {
         width: 100%;
         min-height: 100vh;
-        margin: 0 auto;
         background-color: $cremita;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         overflow: hidden;
+        padding: 0 2rem 0 2rem;
 
         h2 {
             font-size: 2.5em;
-            padding-bottom: 2rem;
-            padding: 0 0 0 5rem;
+            padding: 0 0 2rem 0;
         }
 
         .tarjetas-productos {
             height: 50rem;
             max-width: 120rem;
-            padding: 2rem 10rem 0 5rem;
+            padding-bottom: 7rem;
             display: flex;
             justify-content: space-between;
             gap: 4rem;
             flex-wrap: wrap;
             position: relative;
             z-index: 1;
+            padding: 0 5rem 0 0;
+
+            .slick-arrow {
+                width: 35px;
+                height: 35px;
+                font-size: 1px;
+                color: transparent;
+                border: 1px solid $marron;
+                position: absolute;
+                top: -8%;
+                left: 35%;
+                transform: translate(-50%, -50%);
+                cursor: pointer;
+            }
+
+            .slick-prev {
+                left: 30%;
+                background: url('../../assets/image/angle-left.svg');
+                background-size: 100%;
+            }
+
+            .slick-next {
+                background: url('../../assets/image/angle-right.svg');
+                background-size: 100%;
+            }
 
             .tarjeta1,
             .tarjeta2,
@@ -307,7 +332,7 @@
 
                 .tarjeta-producto {
                     width: 100%;
-                    height: 40rem;
+                    height: 50rem;
                     background-color: $cremita;
                     overflow: hidden;
                     transition: transform 0.3s ease-in-out;
@@ -372,33 +397,10 @@
 
                     img {
                         width: 100%;
+                        height: 100%;
                         object-fit: cover;
                     }
                 }
-            }
-
-            .slick-arrow {
-                width: 30px;
-                height: 30px;
-                font-size: 1px;
-                color: transparent;
-                position: absolute;
-                border: 1px solid rgba(255, 255, 255, 0);
-                top: -60px;
-                right: 2%;
-                cursor: pointer;
-            }
-
-            .slick-prev {
-                right: 5%;
-                background: url('../../assets/image/angle-left.svg');
-                background-size: 100%;
-                color: $marron;
-            }
-
-            .slick-next {
-                background: url('../../assets/image/angle-right.svg');
-                background-size: 100%;
             }
         }
     }
@@ -580,9 +582,6 @@
         justify-content: center;
         overflow: hidden;
 
-        /*----------------*/
-        /*  SCALLOP down    */
-        /*----------------*/
         .scallop-down {
             height: 100px;
             width: 100%;
@@ -615,102 +614,93 @@
 
             .post {
                 width: 100%;
-                height: 50rem;
                 padding: 0 8rem 0 8rem;
                 display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-wrap: wrap;
+
+                .primer-post,
+                .segundo-post,
+                .tercer-post,
+                .cuarto-post {
+                    width: calc(25%);
+                }
 
                 .primer-post {
-                    width: calc(100% / 4);
+                    background-color: $beige;
+                    display: flex;
+                    align-items: center;
+                    font-size: 1.8em;
+                    padding: 2rem;
+                }
+
+                .segundo-post {
+                    position: relative;
+                }
+
+                .cuarto-post {
+                    background-color: $marron;
+                    color: $cremita;
+                }
+
+                .primer-post,
+                .segundo-post,
+                .tercer-post {
+                    height: 45rem;
+                }
+
+                img {
+                    width: 100%;
                     height: 100%;
+                    object-fit: cover;
+                }
+
+                .segundo-post-texto {
+                    width: 100%;
+                    height: 30%;
                     background-color: $beige;
                     padding: 2rem;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                    position: absolute;
+                    top: 0;
 
                     span {
                         font-size: 1.8em;
                     }
                 }
 
-                .segundo-post {
-                    width: calc(100% / 4);
-                    height: 100%;
-                    position: relative;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-
-                    .segundo-post-texto {
-                        width: 100%;
-                        height: 30%;
-                        background-color: $beige;
-                        padding: 2rem;
-                        position: absolute;
-                        top: 0;
-
-                        span {
-                            font-size: 1.8em;
-                        }
-                    }
+                p {
+                    padding: 2rem;
+                    font-size: 1.8em;
                 }
 
-                .tercer-post {
-                    content: '';
-                    width: calc(100% / 4);
-                    height: 100%;
-                    background-color: $beige;
-
-                    img {
-                        width: 100%;
-                        height: 100%;
-                    }
-                }
-
-                .cuarto-post {
-                    width: calc(100% / 4);
-                    height: 100%;
-                    background-color: $marron;
-                    color: $cremita;
+                .top {
                     display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
+                    gap: 1rem;
+                    padding: 2rem;
 
-                    p {
-                        padding: 2rem;
-                        font-size: 1.8em;
+                    .circle {
+                        content: '';
+                        width: 5rem;
+                        height: 5rem;
+                        border-radius: 100px;
+                        background-color: $beige;
                     }
 
-                    .top {
-                        display: flex;
-                        gap: 1rem;
-                        padding: 2rem;
-
-                        .circle {
-                            content: '';
-                            width: 5rem;
-                            height: 5rem;
-                            border-radius: 100px;
-                            background-color: $beige;
-                        }
-
-                        .usuario-ig {
-                            font-size: 1.5em;
-                        }
-                    }
-
-                    .boton-post {
-                        padding: 2rem;
+                    .usuario-ig {
                         font-size: 1.5em;
-                        display: flex;
-                        justify-content: flex-end;
+                    }
+                }
 
-                        span,
-                        i {
-                            cursor: pointer;
-                        }
+                .boton-post {
+                    padding: 2rem;
+                    font-size: 1.5em;
+                    display: flex;
+                    justify-content: flex-end;
+
+                    span,
+                    i {
+                        cursor: pointer;
                     }
                 }
             }
@@ -837,7 +827,10 @@
             padding: 5rem 10rem 5rem 10rem;
 
             .titulo-kits {
-                width: 30%;
+                width: 50rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
 
                 .titulos-kits {
                     h2 {
@@ -847,6 +840,7 @@
                     .links-kits {
                         display: flex;
                         flex-direction: column;
+                        width: 100%;
 
                         a {
                             font-size: 1.8em;
@@ -901,10 +895,11 @@
         min-height: 100vh;
         background-color: $cremita;
         display: flex;
+        flex-wrap: wrap;
         margin: 0 auto;
         justify-content: center;
         align-items: center;
-        gap: 5rem;
+        gap: 2rem;
         overflow: hidden;
         position: relative;
 
@@ -1074,17 +1069,6 @@
 
     .body {
 
-        /*MAIN*/
-        .main {
-
-            .frase {
-
-                h2 {
-                    font-size: 8em;
-                }
-            }
-        }
-
         /*NOVEDADES*/
         .novedades {
             width: 100%;
@@ -1093,9 +1077,9 @@
 
         /*MOTIVOS*/
         .motivos {
-    
+
             .container {
-               
+
                 .porque {
                     display: flex;
                     justify-content: center;
@@ -1161,16 +1145,7 @@
         .destacados {
 
             .tarjetas-productos {
-
-                padding: 2rem 20rem 0 5rem;
-
-                .slick-prev {
-                    right: 20%;
-                }
-
-                .slick-next {
-                    right: 17%;
-                }
+                padding: 0 20rem 0 0;
             }
         }
 
@@ -1193,6 +1168,23 @@
             }
         }
 
+        /*POST INSTAGRAM*/
+        .post-instagram {
+
+            .container {
+                .post {
+
+                    .primer-post,
+                    .segundo-post,
+                    .tercer-post,
+                    .cuarto-post {
+                        width: calc(40%);
+                    }
+                }
+            }
+
+        }
+
         /*EBOOKS*/
         .ebooks {
 
@@ -1210,68 +1202,6 @@
                     flex-wrap: wrap;
                     gap: 2rem;
                     padding: 2rem 0 2rem 0;
-
-                    .ebook {
-                        content: '';
-                        background-color: $beige;
-                        height: 40rem;
-                        width: 40rem;
-                        position: relative;
-
-                        img {
-                            width: 100%;
-                            height: 100%;
-                        }
-
-                        &::before {
-                            content: '';
-                            position: absolute;
-                            bottom: 0;
-                            left: 0;
-                            width: 100%;
-                            height: 0;
-                            background-color: $verde;
-                            transform-origin: bottom;
-                            transition: height 0.3s ease-in-out;
-                        }
-
-                        &:hover::before {
-                            height: 40%;
-                        }
-
-                        &:hover .botones-ebook {
-                            opacity: 1;
-                        }
-
-                        .botones-ebook {
-                            position: absolute;
-                            top: 80%;
-                            left: 50%;
-                            transform: translate(-50%, -50%);
-                            cursor: pointer;
-                            opacity: 0;
-                            transition: .4s ease-in-out;
-
-                            .btn-comprar {
-                                width: 20rem;
-                                height: 5rem;
-                                background-color: $blanco;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                font-size: 1.5em;
-                                font-weight: 500;
-                                border: 2px solid $marron;
-                                border-radius: 100px;
-                                transition: .3s ease-in-out;
-
-                                &:hover {
-                                    background-color: $rosa;
-                                    color: $cremita;
-                                }
-                            }
-                        }
-                    }
                 }
             }
         }
@@ -1286,14 +1216,227 @@
     }
 }
 
+/*PANTALLAS MEDIANAS*/
+@media (max-width:1000px) {
+
+    .body {
+
+        /*MOTIVOS*/
+        .motivos {
+
+            .container {
+
+                .porque {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 0.5rem;
+
+                    h2 {
+                        font-size: 2.5em;
+                    }
+
+                    h3 {
+                        font-size: 1.8em;
+                        width: 50rem;
+                        font-weight: 400;
+                        text-align: center;
+                    }
+                }
+
+                .iconos {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-wrap: wrap;
+
+                }
+            }
+        }
+
+        /*DESTACADOS*/
+        .destacados {
+            .tarjetas-productos {
+                padding: 0 40rem 0 5rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 841px) {
+    .body {
+
+        /*NOVEDADES*/
+        .novedades {
+            height: 200rem;
+        }
+
+        /*TUTORIALES*/
+        .tutoriales {
+            .container {
+                .titulo-tips {
+                    .tips-tutoriales {
+                        width: 40rem;
+                    }
+                }
+
+                .videos {
+                    width: 40rem;
+                    height: 40rem;
+                }
+            }
+        }
+
+        /*KITS*/
+        .kits {
+            .container {
+                flex-direction: column;
+            }
+        }
+
+        /*DESTACADOS*/
+        .destacados {
+            .tarjetas-productos {
+                padding: 0 60rem 0 0;
+            }
+        }
+
+        /*SOBRE MÍ*/
+        .sobre-mi {
+            height: 160rem;
+
+            .container {
+                flex-direction: column-reverse;
+                gap: 2rem;
+
+                .descripcion {
+                    width: 40rem;
+                }
+
+                .fotos {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding-top: 5rem;
+
+                    .foto1 {
+                        width: 40rem;
+                        height: 40rem;
+                    }
+
+                    .otras-fotos {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        flex-wrap: wrap;
+                    }
+                }
+            }
+        }
+
+        /*POST INSTAGRAM*/
+        .post-instagram {
+
+            .container {
+                .post {
+                    padding: 0 0 0 0;
+
+                    .primer-post,
+                    .segundo-post,
+                    .tercer-post,
+                    .cuarto-post {
+                        width: calc(60%);
+                    }
+                }
+            }
+
+        }
+
+        /*EBOOKS*/
+        .ebooks {
+            .container {
+                .descripcion-ebooks {
+                    padding: 5rem;
+                }
+            }
+        }
+
+        /*FOOTER*/
+        .footer {
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+                justify-content: flex-start;
+                gap: 5rem;
+
+                .nav-footer {
+                    padding-right: 27rem;
+                }
+
+                .redes-footer {
+                    padding-right: 22rem;
+                }
+            }
+        }
+    }
+}
 
 /*PANTALLAS PEQUEÑAS*/
-@media (min-width: 600px) {
-    .wide {
-        grid-column: span 2;
-    }
+@media (max-width:630px) {
 
-    .tall {
-        grid-row: span 2;
+    .body {
+
+        /*MAIN*/
+        .main {
+            .frase {
+                h2 {
+                    font-size: 7em;
+                }
+
+                p{
+                    padding: 0 8rem 0 8rem;
+                }
+            }
+        }
+        
+        /*MOTIVOS*/
+        .motivos {
+
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+
+                .porque {
+                    h3 {
+                        padding: 0 8rem 0 8rem;
+                    }
+                }
+            }
+        }
+
+        /*DESTACADOS*/
+        .destacados {
+            .tarjetas-productos {
+                padding: 0 70rem 0 0;
+            }
+        }
+    }
+}
+
+@media (min-width: 800px) {
+
+    .body {
+
+        .wide {
+            grid-column: span 2;
+        }
+
+        .tall {
+            grid-row: span 2;
+        }
     }
 }
