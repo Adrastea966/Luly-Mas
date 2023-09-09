@@ -736,21 +736,19 @@ ul {
     min-height: 100vh;
     background-color: #FFF5EC;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
     margin: 0 auto;
     justify-content: center;
     align-items: center;
-    gap: 2rem;
+    gap: 5rem;
     overflow: hidden;
     position: relative;
     /*----------------*/
     /*  SCALLOP up    */
     /*----------------*/ }
-    .body .puntos-venta .img {
-      content: '';
-      width: 50rem;
-      height: 50rem;
-      background-color: #A09082; }
+    .body .puntos-venta .map {
+      width: 60rem;
+      height: 60rem; }
     .body .puntos-venta .scallop-up {
       position: absolute;
       height: 100px;
@@ -762,13 +760,21 @@ ul {
     .body .puntos-venta .titulo-puntos {
       display: flex;
       flex-direction: column;
-      gap: 1rem; }
+      gap: 1rem;
+      width: 60rem;
+      height: 60rem;
+      border: solid 2px #A09082;
+      border-radius: 20px;
+      max-height: 60rem;
+      overflow-y: auto;
+      padding: 2rem; }
       .body .puntos-venta .titulo-puntos .punto {
         display: flex;
         gap: 1rem;
-        align-items: center; }
+        flex-direction: column; }
         .body .puntos-venta .titulo-puntos .punto span {
-          font-size: 1.8em; }
+          font-size: 1.8em;
+          font-weight: 600; }
         .body .puntos-venta .titulo-puntos .punto a {
           font-size: 1.5em; }
   .body .footer {
@@ -780,7 +786,7 @@ ul {
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    padding: 0 10rem 0 10rem; }
+    padding: 5rem; }
     .body .footer .container {
       display: flex;
       justify-content: center;
@@ -853,6 +859,21 @@ ul {
 
 /*Media querys*/
 /*PANTALLAS GRANDES*/
+@media (max-width: 1420px) {
+  .body {
+    /*EBOOKS*/ }
+    .body .ebooks .container {
+      flex-direction: column; }
+      .body .ebooks .container .descripcion-ebooks {
+        min-height: 50vh;
+        width: 100%; }
+      .body .ebooks .container .contenedor-ebooks {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 2rem;
+        padding: 2rem 0 2rem 0; } }
+
 @media (max-width: 1190px) {
   .body {
     /*NOVEDADES*/
@@ -861,7 +882,6 @@ ul {
     /*DESTACADOS*/
     /*SOBRE MÍ*/
     /*POST INSTAGRAM*/
-    /*EBOOKS*/
     /*FOOTER*/ }
     .body .novedades {
       width: 100%;
@@ -918,17 +938,6 @@ ul {
     .body .post-instagram .container .post .tercer-post,
     .body .post-instagram .container .post .cuarto-post {
       width: calc(40%); }
-    .body .ebooks .container {
-      flex-direction: column; }
-      .body .ebooks .container .descripcion-ebooks {
-        min-height: 50vh;
-        width: 100%; }
-      .body .ebooks .container .contenedor-ebooks {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 2rem 0 2rem 0; }
     .body .footer .container {
       gap: 10rem; } }
 
@@ -967,6 +976,7 @@ ul {
     /*SOBRE MÍ*/
     /*POST INSTAGRAM*/
     /*EBOOKS*/
+    /*PUNTOS DE VENTA*/
     /*FOOTER*/ }
     .body .novedades {
       height: 200rem; }
@@ -1008,6 +1018,8 @@ ul {
         width: calc(60%); }
     .body .ebooks .container .descripcion-ebooks {
       padding: 5rem; }
+    .body .puntos-venta {
+      padding-bottom: 20rem; }
     .body .footer .container {
       flex-direction: column;
       align-items: center;
@@ -1016,14 +1028,26 @@ ul {
       .body .footer .container .nav-footer {
         padding-right: 27rem; }
       .body .footer .container .redes-footer {
-        padding-right: 22rem; } }
+        padding-right: 22rem; }
+    .body .footer .copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; } }
 
 /*PANTALLAS PEQUEÑAS*/
+@media (min-width: 800px) {
+  .body .wide {
+    grid-column: span 2; }
+  .body .tall {
+    grid-row: span 2; } }
+
 @media (max-width: 630px) {
   .body {
     /*MAIN*/
     /*MOTIVOS*/
-    /*DESTACADOS*/ }
+    /*DESTACADOS*/
+    /*PUNTOS DE VENTA*/ }
     .body .main .frase h2 {
       font-size: 7em; }
     .body .main .frase p {
@@ -1036,13 +1060,42 @@ ul {
       .body .motivos .container .porque h3 {
         padding: 0 8rem 0 8rem; }
     .body .destacados .tarjetas-productos {
-      padding: 0 70rem 0 0; } }
+      padding: 0 75rem 0 0; }
+    .body .puntos-venta .map {
+      width: 40rem;
+      height: 50rem; }
+    .body .puntos-venta .titulo-puntos {
+      width: 40rem;
+      height: 40rem; } }
 
-@media (min-width: 800px) {
-  .body .wide {
-    grid-column: span 2; }
-  .body .tall {
-    grid-row: span 2; } }
+@media (max-width: 460px) {
+  .body {
+    /*MAIN*/
+    /*NOVEDADES*/
+    /*MOTIVOS*/
+    /*TUTORIALES*/
+    /*DESTACADOS*/ }
+    .body .main .frase h2 {
+      font-size: 6em; }
+    .body .novedades .container .tarjetas .tarjeta {
+      width: 30rem; }
+    .body .motivos .container .porque h2 {
+      font-size: 2em; }
+    .body .tutoriales .container {
+      justify-content: center;
+      align-items: center; }
+      .body .tutoriales .container .videos {
+        width: 30rem;
+        height: 40rem; }
+    .body .destacados h2 {
+      padding: 0 0 8rem 0; }
+    .body .destacados .tarjetas-productos {
+      padding: 0 80rem 0 0; }
+      .body .destacados .tarjetas-productos .slick-arrow {
+        top: -8%;
+        left: 25%; }
+      .body .destacados .tarjetas-productos .slick-prev {
+        left: 20%; } }
 
 /*HELPERS*/
 /*Helpers*/

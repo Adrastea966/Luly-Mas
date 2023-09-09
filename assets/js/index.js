@@ -111,3 +111,61 @@ $(document).ready(function () {
         ]
     });
 });
+
+//Mapa
+function iniciarMap() {
+    // Array de coordenadas
+    let coordenadas = [
+        { lat: -34.6518378, lng: -58.6937442 },
+        { lat: -34.662345, lng: -58.701234 },
+        { lat: -34.673456, lng: -58.712345 },
+    ];
+
+    // URL del icono personalizado (marcador rosa en formato SVG)
+    let rosaIconUrl = '../../assets/image/location-point.svg';
+
+    let map = new google.maps.Map(document.getElementById('map'), {
+        zoom: 10,
+        center: coordenadas[0] 
+    });
+
+    for (let i = 0; i < coordenadas.length; i++) {
+        let marker = new google.maps.Marker({
+            position: coordenadas[i],
+            map: map,
+            icon: {
+                url: rosaIconUrl, // URL del icono personalizado
+                scaledSize: new google.maps.Size(40, 40) // Tamaño personalizado del icono
+            }
+        });
+    }
+
+    // Selector para todas las etiquetas <a> con la clase "ver-mapa"
+    $('.ver-mapa').on('click', function (event) {
+        event.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+        // Obtiene las coordenadas de los atributos de datos
+        let lat = $(this).siblings('span').data('lat');
+        let lng = $(this).siblings('span').data('lng');
+
+        // Crea un objeto de coordenadas
+        let coordenada = new google.maps.LatLng(lat, lng);
+
+        // Establece el zoom deseado (por ejemplo, 15) para hacer zoom en la coordenada
+        map.setZoom(15);
+
+        // Centra el mapa en la coordenada seleccionada
+        map.setCenter(coordenada);
+
+        // Crea un marcador en la coordenada seleccionada
+        let marker = new google.maps.Marker({
+            position: coordenada,
+            map: map,
+            icon: {
+                url: rosaIconUrl, // URL del icono personalizado
+                scaledSize: new google.maps.Size(40, 40) // Tamaño personalizado del icono
+            }
+        });
+    });
+}
+

@@ -30,7 +30,7 @@
                     <ul>
                         <li class="link-navbar"><a href="#tutoriales">Tutoriales</a></li>
                         <li class="link-navbar"><a href="#kits">Mis kits</a></li>
-                        <li class="link-navbar"><a href="#ebooks">Ebooks</a></li>
+                        <li class="link-navbar"><a href="#productos">Productos</a></li>
                         <li class="link-navbar"><a href="#locales">Locales</a></li>
                     </ul>
                 </nav>
@@ -155,7 +155,7 @@
     <!--Fin motivos Luly-->
 
     <!--Destacados-->
-    <section class="destacados">
+    <section class="destacados" id="productos">
 
         <div class="container">
 
@@ -450,42 +450,28 @@
     <!--Puntos de venta-->
     <section class="puntos-venta" id="locales">
 
-        <div class="img"></div>
         <div class="scallop-up"></div>
+
+        <div class="map" id="map"></div>
 
         <div class="titulo-puntos">
 
             <div class="punto">
-                <span>Punto de venta numero1</span>
-                <a href="#">Ver en google maps</a>
+                <span data-lat="-34.6518378" data-lng="-58.6937442">NOMBRE TIENDA | Nro de calle</span>
+                <a href="#" class="ver-mapa">Ver en el mapa</a>
             </div>
             <div class="punto">
-                <span>Punto de venta numero1</span>
-                <a href="#">Ver en google maps</a>
+                <span data-lat="-34.662345" data-lng="-58.701234">NOMBRE TIENDA | Nro de calle</span>
+                <a href="#" class="ver-mapa">Ver en el mapa</a>
             </div>
             <div class="punto">
-                <span>Punto de venta numero1</span>
-                <a href="#">Ver en google maps</a>
+                <span data-lat="-34.673456" data-lng="-58.712345">NOMBRE TIENDA | Nro de calle</span>
+                <a href="#" class="ver-mapa">Ver en el mapa</a>
             </div>
-            <div class="punto">
-                <span>Punto de venta numero1</span>
-                <a href="#">Ver en google maps</a>
-            </div>
-            <div class="punto">
-                <span>Punto de venta numero1</span>
-                <a href="#">Ver en google maps</a>
-            </div>
-            <div class="punto">
-                <span>Punto de venta numero1</span>
-                <a href="#">Ver en google maps</a>
-            </div>
-            <div class="punto">
-                <span>Punto de venta numero1</span>
-                <a href="#">Ver en google maps</a>
-            </div>
-
+            
         </div>
 
+        
     </section>
     <!--Fin puntos de venta-->
 
@@ -503,7 +489,7 @@
                 <ul>
                     <li><a href="#tutoriales">Tutoriales</a></li>
                     <li><a href="#kits">Mis kits</a></li>
-                    <li><a href="#ebooks">Ebooks</a></li>
+                    <li><a href="#productos">Productos</a></li>
                     <li><a href="#locales">Locales</a></li>
                 </ul>
             </div>
@@ -541,6 +527,8 @@
         AOS.init();
     </script>
     <script src="assets/js/index.js"></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
 
 </body>
 
