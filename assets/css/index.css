@@ -44,7 +44,6 @@ ul {
   /*Tutoriales*/
   /*Sobre-mi*/
   /*Post instagram*/
-  /*Ebooks*/
   /*Kits*/
   /*Puntos de venta*/
   /*Footer*/
@@ -258,9 +257,23 @@ ul {
     align-items: center;
     overflow: hidden;
     padding: 0 2rem 0 2rem; }
-    .body .destacados h2 {
-      font-size: 2.5em;
-      padding: 0 0 2rem 0; }
+    .body .destacados .tienda {
+      display: flex;
+      justify-content: space-between; }
+      .body .destacados .tienda h2 {
+        font-size: 2.5em;
+        padding: 0 0 2rem 0; }
+      .body .destacados .tienda .boton-tienda {
+        padding-right: 6rem;
+        cursor: pointer; }
+        .body .destacados .tienda .boton-tienda a {
+          color: #A09082;
+          font-size: 1.5em;
+          font-weight: 400;
+          transition: .3s ease-in-out; }
+          .body .destacados .tienda .boton-tienda a:hover {
+            color: #FF9CA2;
+            font-weight: 600; }
     .body .destacados .tarjetas-productos {
       height: 50rem;
       max-width: 120rem;
@@ -454,11 +467,19 @@ ul {
             padding-bottom: 2rem; }
           .body .tutoriales .container .titulo-tips .tips-tutoriales span {
             font-size: 1.5em; }
-      .body .tutoriales .container .videos {
+      .body .tutoriales .container .videos,
+      .body .tutoriales .container .videos2,
+      .body .tutoriales .container .videos3 {
         content: '';
         width: 50rem;
         height: 50rem;
         background-color: #A09082; }
+      .body .tutoriales .container .videos2 {
+        background-color: #FF9CA2; }
+      .body .tutoriales .container .videos3 {
+        background-color: #F2E1D2; }
+    .body .tutoriales .show {
+      display: none; }
   .body .sobre-mi {
     width: 100%;
     min-height: 100vh;
@@ -603,82 +624,6 @@ ul {
           .body .post-instagram .container .post .boton-post span,
           .body .post-instagram .container .post .boton-post i {
             cursor: pointer; }
-  .body .ebooks {
-    width: 100%;
-    min-height: 100vh;
-    background-color: #D6EFE9;
-    display: flex;
-    gap: 2rem;
-    overflow: hidden; }
-    .body .ebooks .container {
-      display: flex;
-      gap: 2rem; }
-      .body .ebooks .container .descripcion-ebooks {
-        min-height: 100vh;
-        width: 100rem;
-        background-color: #ACEBDC;
-        padding: 0 5rem 0 5rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center; }
-        .body .ebooks .container .descripcion-ebooks h2 {
-          font-size: 2.5em;
-          padding-bottom: 2rem; }
-        .body .ebooks .container .descripcion-ebooks p {
-          font-size: 1.8em; }
-      .body .ebooks .container .contenedor-ebooks {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 2rem 0 2rem 0; }
-        .body .ebooks .container .contenedor-ebooks .ebook {
-          content: '';
-          background-color: #F2E1D2;
-          height: 40rem;
-          width: 40rem;
-          position: relative; }
-          .body .ebooks .container .contenedor-ebooks .ebook img {
-            width: 100%;
-            height: 100%; }
-          .body .ebooks .container .contenedor-ebooks .ebook::before {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 0;
-            background-color: #ACEBDC;
-            transform-origin: bottom;
-            transition: height 0.3s ease-in-out; }
-          .body .ebooks .container .contenedor-ebooks .ebook:hover::before {
-            height: 40%; }
-          .body .ebooks .container .contenedor-ebooks .ebook:hover .botones-ebook {
-            opacity: 1; }
-          .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook {
-            position: absolute;
-            top: 80%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            cursor: pointer;
-            opacity: 0;
-            transition: .4s ease-in-out; }
-            .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook .btn-comprar {
-              width: 20rem;
-              height: 5rem;
-              background-color: #fff;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              font-size: 1.5em;
-              font-weight: 500;
-              border: 2px solid #A09082;
-              border-radius: 100px;
-              transition: .3s ease-in-out; }
-              .body .ebooks .container .contenedor-ebooks .ebook .botones-ebook .btn-comprar:hover {
-                background-color: #FF9CA2;
-                color: #FFF5EC; }
   .body .kits {
     width: 100%;
     min-height: 100vh;
