@@ -177,17 +177,16 @@
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-                gap: 2rem;
+                gap: 3rem;
 
                 .tarjeta {
                     content: '';
-                    width: 35rem;
+                    width: 50rem;
                     height: 28rem;
                     background-color: $beige;
                     border-radius: 10px;
-                    padding: 2rem;
-                    box-shadow: 0 5px 20px 0 #decec0;
-
+                    display:flex;
+                  
                     h3 {
                         font-size: 1.6em;
                         padding-bottom: 2rem;
@@ -195,6 +194,23 @@
 
                     span {
                         font-size: 1.4em;
+                    }
+
+                    .tarjeta-izquierda{
+                        width: 50%;
+                        height: 100%;
+                        img{
+                            width:100%;
+                            height: 100%;
+                            border-top-left-radius: 10px;
+                            border-bottom-left-radius: 10px;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .tarjeta-derecha{
+                        width: 50%;
+                        padding: 2rem;
                     }
                 }
             }
@@ -1003,40 +1019,15 @@
 
 /*Media querys*/
 /*PANTALLAS GRANDES*/
-@media (max-width:1420px) {
-    .body {
-
-        /*EBOOKS*/
-        .ebooks {
-
-            .container {
-                flex-direction: column;
-
-                .descripcion-ebooks {
-                    min-height: 50vh;
-                    width: 100%;
-                }
-
-                .contenedor-ebooks {
-                    display: flex;
-                    justify-content: center;
-                    flex-wrap: wrap;
-                    gap: 2rem;
-                    padding: 2rem 0 2rem 0;
-                }
-            }
-        }
-    }
-}
 
 @media (max-width:1190px) {
     .body {
 
         /*NOVEDADES*/
-        .novedades {
-            width: 100%;
-            height: 110rem;
-        }
+        // .novedades {
+        //     width: 100%;
+        //     height: 110rem;
+        // }
 
         /*MOTIVOS*/
         .motivos {

@@ -171,37 +171,28 @@ function iniciarMap() {
 //Tutoriales
 let btnTutoUno = document.querySelector('.btn-tuto-1');
 let btnTutoDos = document.querySelector('.btn-tuto-2');
-let btnTutoTres = document.querySelector('.btn-tuto-3');
 let tipsTutoUno = document.querySelector('.tips1');
 let tipsTutoDos = document.querySelector('.tips2');
-let tipsTutoTres = document.querySelector('.tips3');
 let videoUno = document.querySelector('.videos');
 let videoDos = document.querySelector('.videos2');
-let videoTres = document.querySelector('.videos3');
 
 btnTutoUno.addEventListener('click', function(){
     tipsTutoUno.classList.remove('show')
     tipsTutoDos.classList.add('show');
-    tipsTutoTres.classList.add('show');
     videoUno.classList.remove('show');
     videoDos.classList.add('show');
-    videoTres.classList.add('show');
 })
 
 btnTutoDos.addEventListener('click', function(){
     tipsTutoDos.classList.remove('show');
     tipsTutoUno.classList.add('show');
-    tipsTutoTres.classList.add('show');
     videoDos.classList.remove('show');
     videoUno.classList.add('show');
-    videoTres.classList.add('show');
 })
 
 btnTutoTres.addEventListener('click', function(){
-    tipsTutoTres.classList.remove('show');
     tipsTutoUno.classList.add('show');
     tipsTutoDos.classList.add('show');
     videoDos.classList.add('show');
     videoUno.classList.add('show');
-    videoTres.classList.remove('show');
 })

@@ -182,20 +182,31 @@ ul {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        gap: 2rem; }
+        gap: 3rem; }
         .body .novedades .container .tarjetas .tarjeta {
           content: '';
-          width: 35rem;
+          width: 50rem;
           height: 28rem;
           background-color: #F2E1D2;
           border-radius: 10px;
-          padding: 2rem;
-          box-shadow: 0 5px 20px 0 #decec0; }
+          display: flex; }
           .body .novedades .container .tarjetas .tarjeta h3 {
             font-size: 1.6em;
             padding-bottom: 2rem; }
           .body .novedades .container .tarjetas .tarjeta span {
             font-size: 1.4em; }
+          .body .novedades .container .tarjetas .tarjeta .tarjeta-izquierda {
+            width: 50%;
+            height: 100%; }
+            .body .novedades .container .tarjetas .tarjeta .tarjeta-izquierda img {
+              width: 100%;
+              height: 100%;
+              border-top-left-radius: 10px;
+              border-bottom-left-radius: 10px;
+              object-fit: cover; }
+          .body .novedades .container .tarjetas .tarjeta .tarjeta-derecha {
+            width: 50%;
+            padding: 2rem; }
   .body .motivos {
     width: 100%;
     min-height: 100vh;
@@ -804,21 +815,6 @@ ul {
 
 /*Media querys*/
 /*PANTALLAS GRANDES*/
-@media (max-width: 1420px) {
-  .body {
-    /*EBOOKS*/ }
-    .body .ebooks .container {
-      flex-direction: column; }
-      .body .ebooks .container .descripcion-ebooks {
-        min-height: 50vh;
-        width: 100%; }
-      .body .ebooks .container .contenedor-ebooks {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 2rem;
-        padding: 2rem 0 2rem 0; } }
-
 @media (max-width: 1190px) {
   .body {
     /*NOVEDADES*/
@@ -828,9 +824,6 @@ ul {
     /*SOBRE MÍ*/
     /*POST INSTAGRAM*/
     /*FOOTER*/ }
-    .body .novedades {
-      width: 100%;
-      height: 110rem; }
     .body .motivos .container .porque {
       display: flex;
       justify-content: center;
