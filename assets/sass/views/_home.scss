@@ -87,6 +87,10 @@
                     }
                 }
 
+                .abrir-menu {
+                    display: none;
+                }
+
                 .nav {
                     ul {
                         display: flex;
@@ -115,6 +119,10 @@
                                 z-index: -1;
                             }
                         }
+                    }
+
+                    .cerrar{
+                        display:none;
                     }
                 }
 
@@ -185,8 +193,8 @@
                     height: 28rem;
                     background-color: $beige;
                     border-radius: 10px;
-                    display:flex;
-                  
+                    display: flex;
+
                     h3 {
                         font-size: 1.6em;
                         padding-bottom: 2rem;
@@ -196,11 +204,12 @@
                         font-size: 1.4em;
                     }
 
-                    .tarjeta-izquierda{
+                    .tarjeta-izquierda {
                         width: 50%;
                         height: 100%;
-                        img{
-                            width:100%;
+
+                        img {
+                            width: 100%;
                             height: 100%;
                             border-top-left-radius: 10px;
                             border-bottom-left-radius: 10px;
@@ -208,9 +217,20 @@
                         }
                     }
 
-                    .tarjeta-derecha{
+                    .tarjeta-derecha {
                         width: 50%;
                         padding: 2rem;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+
+                        .link-ver-noticia {
+                            font-size: 1.5em;
+                            font-weight: 600;
+                            color: $marron;
+                            display: flex;
+                            justify-content: flex-end;
+                        }
                     }
                 }
             }
@@ -296,9 +316,9 @@
         overflow: hidden;
         padding: 0 2rem 0 2rem;
 
-        .tienda{
-        
-            display:flex;
+        .tienda {
+
+            display: flex;
             justify-content: space-between;
 
             h2 {
@@ -306,24 +326,24 @@
                 padding: 0 0 2rem 0;
             }
 
-            .boton-tienda{
+            .boton-tienda {
                 padding-right: 6rem;
                 cursor: pointer;
 
-                a{
+                a {
                     color: $marron;
                     font-size: 1.5em;
                     font-weight: 400;
                     transition: .3s ease-in-out;
 
-                    &:hover{
+                    &:hover {
                         color: $rosa;
                         font-weight: 600;
                     }
                 }
-            }  
+            }
         }
-       
+
         .tarjetas-productos {
             height: 50rem;
             max-width: 120rem;
@@ -536,17 +556,17 @@
                 background-color: $marron;
             }
 
-            .videos2{
+            .videos2 {
                 background-color: $rosa;
             }
 
-            .videos3{
+            .videos3 {
                 background-color: $beige;
             }
         }
 
-        .show{
-            display:none;
+        .show {
+            display: none;
         }
     }
 
@@ -1024,10 +1044,10 @@
     .body {
 
         /*NOVEDADES*/
-        // .novedades {
-        //     width: 100%;
-        //     height: 110rem;
-        // }
+        .novedades {
+            width: 100%;
+            height: 140rem;
+        }
 
         /*MOTIVOS*/
         .motivos {
@@ -1200,11 +1220,6 @@
 @media (max-width: 841px) {
     .body {
 
-        /*NOVEDADES*/
-        .novedades {
-            height: 200rem;
-        }
-
         /*TUTORIALES*/
         .tutoriales {
             .container {
@@ -1356,6 +1371,63 @@
                     padding: 0 8rem 0 8rem;
                 }
             }
+
+            /*HEADER*/
+            .header {
+                .container {
+
+                    .abrir-menu {
+                        display: block;
+                    }
+
+                    .nav{
+                        opacity: 0;
+                        visibility: hidden;
+                        display:flex;
+                        flex-direction: column;
+                        position: absolute;
+                        align-items: end;
+                        width: 0;
+                        gap:1rem;
+                        top:0;
+                        right: 0;
+                        height: 100rem;
+                        background-color: $blanco;
+                        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
+                        transition: width .3s ease-in-out;
+                
+                        ul{
+                            flex-direction: column;
+                            align-items: end;
+                        }
+
+                        .cerrar{
+                            display:block;
+                        }
+                    }
+
+                    .visible{
+                        width: 200px;
+                        opacity: 1;
+                        visibility: visible;
+                    }
+
+                    .redes{
+                        display:none;
+                    }
+                }
+            }
+        }
+
+        /*NOVEDADES*/
+        .novedades {
+            .container {
+                .tarjetas {
+                    .tarjeta {
+                        width: 40rem;
+                    }
+                }
+            }
         }
 
         /*MOTIVOS*/
@@ -1409,17 +1481,6 @@
             }
         }
 
-        /*NOVEDADES*/
-        .novedades {
-            .container {
-                .tarjetas {
-                    .tarjeta {
-                        width: 30rem;
-                    }
-                }
-            }
-        }
-
         /*MOTIVOS*/
         .motivos {
 
@@ -1456,7 +1517,7 @@
 
             .tarjetas-productos {
                 padding: 0 80rem 0 0;
-                
+
                 .slick-arrow {
                     top: -8%;
                     left: 25%;

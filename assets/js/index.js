@@ -190,9 +190,15 @@ btnTutoDos.addEventListener('click', function(){
     videoUno.classList.add('show');
 })
 
-btnTutoTres.addEventListener('click', function(){
-    tipsTutoUno.classList.add('show');
-    tipsTutoDos.classList.add('show');
-    videoDos.classList.add('show');
-    videoUno.classList.add('show');
+//Menu hamburguesa
+const nav = document.querySelector('#nav');
+const abrir = document.querySelector('#abrir');
+const cerrar = document.querySelector('#cerrar');
+
+abrir.addEventListener("click", ()=>{
+    nav.classList.add("visible");
+})
+
+cerrar.addEventListener("click", ()=>{
+    nav.classList.remove("visible");
 })

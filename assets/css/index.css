@@ -121,6 +121,8 @@ ul {
           transition: color .3s ease-in-out; }
           .body .main .header .container .logo:hover {
             color: #FF9CA2; }
+        .body .main .header .container .abrir-menu {
+          display: none; }
         .body .main .header .container .nav ul {
           display: flex;
           gap: 2rem;
@@ -142,6 +144,8 @@ ul {
               width: 100%;
               height: 100%;
               z-index: -1; }
+        .body .main .header .container .nav .cerrar {
+          display: none; }
         .body .main .header .container .redes {
           display: flex;
           gap: 1rem;
@@ -206,7 +210,16 @@ ul {
               object-fit: cover; }
           .body .novedades .container .tarjetas .tarjeta .tarjeta-derecha {
             width: 50%;
-            padding: 2rem; }
+            padding: 2rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between; }
+            .body .novedades .container .tarjetas .tarjeta .tarjeta-derecha .link-ver-noticia {
+              font-size: 1.5em;
+              font-weight: 600;
+              color: #A09082;
+              display: flex;
+              justify-content: flex-end; }
   .body .motivos {
     width: 100%;
     min-height: 100vh;
@@ -824,6 +837,9 @@ ul {
     /*SOBRE MÍ*/
     /*POST INSTAGRAM*/
     /*FOOTER*/ }
+    .body .novedades {
+      width: 100%;
+      height: 140rem; }
     .body .motivos .container .porque {
       display: flex;
       justify-content: center;
@@ -907,7 +923,6 @@ ul {
 
 @media (max-width: 841px) {
   .body {
-    /*NOVEDADES*/
     /*TUTORIALES*/
     /*KITS*/
     /*DESTACADOS*/
@@ -916,8 +931,6 @@ ul {
     /*EBOOKS*/
     /*PUNTOS DE VENTA*/
     /*FOOTER*/ }
-    .body .novedades {
-      height: 200rem; }
     .body .tutoriales .container .titulo-tips .tips-tutoriales {
       width: 40rem; }
     .body .tutoriales .container .videos {
@@ -983,13 +996,46 @@ ul {
 @media (max-width: 630px) {
   .body {
     /*MAIN*/
+    /*NOVEDADES*/
     /*MOTIVOS*/
     /*DESTACADOS*/
     /*PUNTOS DE VENTA*/ }
-    .body .main .frase h2 {
-      font-size: 7em; }
-    .body .main .frase p {
-      padding: 0 8rem 0 8rem; }
+    .body .main {
+      /*HEADER*/ }
+      .body .main .frase h2 {
+        font-size: 7em; }
+      .body .main .frase p {
+        padding: 0 8rem 0 8rem; }
+      .body .main .header .container .abrir-menu {
+        display: block; }
+      .body .main .header .container .nav {
+        opacity: 0;
+        visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        align-items: end;
+        width: 0;
+        gap: 1rem;
+        top: 0;
+        right: 0;
+        height: 100rem;
+        background-color: #fff;
+        box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
+        transition: width .3s ease-in-out; }
+        .body .main .header .container .nav ul {
+          flex-direction: column;
+          align-items: end; }
+        .body .main .header .container .nav .cerrar {
+          display: block; }
+      .body .main .header .container .visible {
+        width: 200px;
+        opacity: 1;
+        visibility: visible; }
+      .body .main .header .container .redes {
+        display: none; }
+    .body .novedades .container .tarjetas .tarjeta {
+      width: 40rem; }
     .body .motivos .container {
       display: flex;
       justify-content: center;
@@ -1009,14 +1055,11 @@ ul {
 @media (max-width: 460px) {
   .body {
     /*MAIN*/
-    /*NOVEDADES*/
     /*MOTIVOS*/
     /*TUTORIALES*/
     /*DESTACADOS*/ }
     .body .main .frase h2 {
       font-size: 6em; }
-    .body .novedades .container .tarjetas .tarjeta {
-      width: 30rem; }
     .body .motivos .container .porque h2 {
       font-size: 2em; }
     .body .tutoriales .container {
