@@ -14,43 +14,76 @@ document.addEventListener('scroll', function() {
     }
 });
 function changeColorToMarron(isScrolled) {
-    const textColor = isScrolled ? '#A09082' : '#FFF5EC';
-    const hoverColor = isScrolled ? '#FF9CA2' : '#FF9CA2';
-    const hoverEndColor = isScrolled ? textColor : '#FFF5EC';
-
     const logo = document.querySelector('.logo');
     const navItems = document.querySelectorAll('.link-navbar');
     const socialIcons = document.querySelectorAll('.red');
 
-    logo.style.color = textColor;
-    logo.addEventListener('mouseenter', () => {
-        logo.style.color = hoverColor;
-    });
-    logo.addEventListener('mouseleave', () => {
-        logo.style.color = hoverEndColor;
-    });
+    // Verifica el ancho de la ventana
+    if (window.innerWidth <= 630) {
+        const marronColor = '#A09082';
+        
+        navItems.forEach(item => {
+            item.style.color = marronColor;
+            item.removeEventListener('mouseenter', null);
+            item.removeEventListener('mouseleave', null);
+        });
 
-    navItems.forEach(item => {
-        item.style.color = textColor;
-        item.style.fontWeight = isScrolled ? '500' : '';
-        item.addEventListener('mouseenter', () => {
-            item.style.color = hoverColor;
-        });
-        item.addEventListener('mouseleave', () => {
-            item.style.color = hoverEndColor;
-        });
-    });
+        const textColor = isScrolled ? '#A09082' : '#FFF5EC';
+        const hoverColor = isScrolled ? '#FF9CA2' : '#FF9CA2';
+        const hoverEndColor = isScrolled ? textColor : '#FFF5EC';
 
-    socialIcons.forEach(icon => {
-        icon.style.color = textColor;
-        icon.style.fontWeight = isScrolled ? '500' : '';
-        icon.addEventListener('mouseenter', () => {
-            icon.style.color = hoverColor;
+        logo.style.color = textColor;
+        logo.addEventListener('mouseenter', () => {
+            logo.style.color = hoverColor;
         });
-        icon.addEventListener('mouseleave', () => {
-            icon.style.color = hoverEndColor;
+        logo.addEventListener('mouseleave', () => {
+            logo.style.color = hoverEndColor;
         });
-    });
+
+        socialIcons.forEach(icon => {
+            icon.style.color = textColor;
+            icon.addEventListener('mouseenter', () => {
+                icon.style.color = hoverColor;
+            });
+            icon.addEventListener('mouseleave', () => {
+                icon.style.color = hoverEndColor;
+            });
+        });
+    } else {
+        const textColor = isScrolled ? '#A09082' : '#FFF5EC';
+        const hoverColor = isScrolled ? '#FF9CA2' : '#FF9CA2';
+        const hoverEndColor = isScrolled ? textColor : '#FFF5EC';
+
+        logo.style.color = textColor;
+        logo.addEventListener('mouseenter', () => {
+            logo.style.color = hoverColor;
+        });
+        logo.addEventListener('mouseleave', () => {
+            logo.style.color = hoverEndColor;
+        });
+
+        navItems.forEach(item => {
+            item.style.color = textColor;
+            item.style.fontWeight = isScrolled ? '500' : '';
+            item.addEventListener('mouseenter', () => {
+                item.style.color = hoverColor;
+            });
+            item.addEventListener('mouseleave', () => {
+                item.style.color = hoverEndColor;
+            });
+        });
+
+        socialIcons.forEach(icon => {
+            icon.style.color = textColor;
+            icon.style.fontWeight = isScrolled ? '500' : '';
+            icon.addEventListener('mouseenter', () => {
+                icon.style.color = hoverColor;
+            });
+            icon.addEventListener('mouseleave', () => {
+                icon.style.color = hoverEndColor;
+            });
+        });
+    }
 }
 
 //Botón scroll arriba

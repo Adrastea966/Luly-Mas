@@ -323,18 +323,18 @@
 
             h2 {
                 font-size: 2.5em;
-                padding: 0 0 2rem 0;
             }
 
             .boton-tienda {
                 padding-right: 6rem;
                 cursor: pointer;
-
+    
                 a {
                     color: $marron;
                     font-size: 1.5em;
                     font-weight: 400;
                     transition: .3s ease-in-out;
+                    padding-bottom: 2rem;
 
                     &:hover {
                         color: $rosa;
@@ -1378,6 +1378,10 @@
 
                     .abrir-menu {
                         display: block;
+                        background-color: transparent;
+                        border: transparent;
+                        font-size: 2.5em;
+                        color: $marron;
                     }
 
                     .nav{
@@ -1394,7 +1398,9 @@
                         height: 100rem;
                         background-color: $blanco;
                         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, .5);
-                        transition: width .3s ease-in-out;
+                        transition: width .4s ease-in-out;
+                        padding: 2rem;
+                     
                 
                         ul{
                             flex-direction: column;
@@ -1403,11 +1409,15 @@
 
                         .cerrar{
                             display:block;
+                            background-color: transparent;
+                            border: transparent;
+                            font-size: 2em;
+                            color: $marron;
                         }
                     }
 
                     .visible{
-                        width: 200px;
+                        width: 300px;
                         opacity: 1;
                         visibility: visible;
                     }
@@ -1441,7 +1451,7 @@
 
                 .porque {
                     h3 {
-                        padding: 0 8rem 0 8rem;
+                        width: 280px;
                     }
                 }
             }
@@ -1490,6 +1500,7 @@
 
                     h2 {
                         font-size: 2em;
+                        padding-top: 2rem;
                     }
                 }
             }
@@ -1511,8 +1522,12 @@
         /*DESTACADOS*/
         .destacados {
 
-            h2 {
-                padding: 0 0 8rem 0;
+            .container{
+                .tienda{
+                    .boton-tienda{
+                        padding-bottom: 5rem;
+                    }
+                }
             }
 
             .tarjetas-productos {
@@ -1528,49 +1543,5 @@
                 }
             }
         }
-
-        // /*SOBRE MÍ*/
-        // .sobre-mi {
-        //     height: 130rem;
-
-        //     .container {
-        //         flex-direction: column-reverse;
-        //         gap: 2rem;
-
-        //         .descripcion {
-        //             width: 60%;
-        //         }
-
-        //         .fotos {
-        //             padding-left: 0;
-        //             padding-top: 10rem;
-        //         }
-        //     }
-        // }
-
-        // /*POST INSTAGRAM*/
-        // .post-instagram {
-
-        //     .container {
-        //         .post {
-
-        //             .primer-post,
-        //             .segundo-post,
-        //             .tercer-post,
-        //             .cuarto-post {
-        //                 width: calc(40%);
-        //             }
-        //         }
-        //     }
-
-        // }
-
-        // /*FOOTER*/
-        // .footer {
-
-        //     .container {
-        //         gap: 10rem;
-        //     }
-        // }
     }
 }

@@ -285,8 +285,7 @@ ul {
       display: flex;
       justify-content: space-between; }
       .body .destacados .tienda h2 {
-        font-size: 2.5em;
-        padding: 0 0 2rem 0; }
+        font-size: 2.5em; }
       .body .destacados .tienda .boton-tienda {
         padding-right: 6rem;
         cursor: pointer; }
@@ -294,7 +293,8 @@ ul {
           color: #A09082;
           font-size: 1.5em;
           font-weight: 400;
-          transition: .3s ease-in-out; }
+          transition: .3s ease-in-out;
+          padding-bottom: 2rem; }
           .body .destacados .tienda .boton-tienda a:hover {
             color: #FF9CA2;
             font-weight: 600; }
@@ -1007,7 +1007,11 @@ ul {
       .body .main .frase p {
         padding: 0 8rem 0 8rem; }
       .body .main .header .container .abrir-menu {
-        display: block; }
+        display: block;
+        background-color: transparent;
+        border: transparent;
+        font-size: 2.5em;
+        color: #A09082; }
       .body .main .header .container .nav {
         opacity: 0;
         visibility: hidden;
@@ -1022,14 +1026,19 @@ ul {
         height: 100rem;
         background-color: #fff;
         box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.5);
-        transition: width .3s ease-in-out; }
+        transition: width .4s ease-in-out;
+        padding: 2rem; }
         .body .main .header .container .nav ul {
           flex-direction: column;
           align-items: end; }
         .body .main .header .container .nav .cerrar {
-          display: block; }
+          display: block;
+          background-color: transparent;
+          border: transparent;
+          font-size: 2em;
+          color: #A09082; }
       .body .main .header .container .visible {
-        width: 200px;
+        width: 300px;
         opacity: 1;
         visibility: visible; }
       .body .main .header .container .redes {
@@ -1042,7 +1051,7 @@ ul {
       align-items: center;
       flex-direction: column; }
       .body .motivos .container .porque h3 {
-        padding: 0 8rem 0 8rem; }
+        width: 280px; }
     .body .destacados .tarjetas-productos {
       padding: 0 75rem 0 0; }
     .body .puntos-venta .map {
@@ -1061,15 +1070,16 @@ ul {
     .body .main .frase h2 {
       font-size: 6em; }
     .body .motivos .container .porque h2 {
-      font-size: 2em; }
+      font-size: 2em;
+      padding-top: 2rem; }
     .body .tutoriales .container {
       justify-content: center;
       align-items: center; }
       .body .tutoriales .container .videos {
         width: 30rem;
         height: 40rem; }
-    .body .destacados h2 {
-      padding: 0 0 8rem 0; }
+    .body .destacados .container .tienda .boton-tienda {
+      padding-bottom: 5rem; }
     .body .destacados .tarjetas-productos {
       padding: 0 80rem 0 0; }
       .body .destacados .tarjetas-productos .slick-arrow {
