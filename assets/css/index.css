@@ -197,7 +197,7 @@ ul {
           .body .novedades .container .tarjetas .tarjeta h3 {
             font-size: 1.6em;
             padding-bottom: 2rem; }
-          .body .novedades .container .tarjetas .tarjeta span {
+          .body .novedades .container .tarjetas .tarjeta p {
             font-size: 1.4em; }
           .body .novedades .container .tarjetas .tarjeta .tarjeta-izquierda {
             width: 50%;
@@ -489,7 +489,7 @@ ul {
           .body .tutoriales .container .titulo-tips .tips-tutoriales h3 {
             font-size: 2em;
             padding-bottom: 2rem; }
-          .body .tutoriales .container .titulo-tips .tips-tutoriales span {
+          .body .tutoriales .container .titulo-tips .tips-tutoriales p {
             font-size: 1.5em; }
       .body .tutoriales .container .videos,
       .body .tutoriales .container .videos2,
@@ -555,7 +555,7 @@ ul {
         padding-right: 5rem; }
         .body .sobre-mi .container .descripcion h2 {
           font-size: 2.5em; }
-        .body .sobre-mi .container .descripcion span {
+        .body .sobre-mi .container .descripcion p {
           font-size: 1.5em; }
   .body .post-instagram {
     width: 100%;
@@ -768,7 +768,7 @@ ul {
         width: 350px; }
         .body .footer .container .descripcion-footer h3 {
           font-size: 1.8em; }
-        .body .footer .container .descripcion-footer span {
+        .body .footer .container .descripcion-footer p {
           font-size: 1.5em; }
       .body .footer .container .nav-footer {
         padding-right: 5rem; }
@@ -928,7 +928,6 @@ ul {
     /*DESTACADOS*/
     /*SOBRE MÍ*/
     /*POST INSTAGRAM*/
-    /*EBOOKS*/
     /*PUNTOS DE VENTA*/
     /*FOOTER*/ }
     .body .tutoriales .container .titulo-tips .tips-tutoriales {
@@ -967,8 +966,6 @@ ul {
       .body .post-instagram .container .post .tercer-post,
       .body .post-instagram .container .post .cuarto-post {
         width: calc(60%); }
-    .body .ebooks .container .descripcion-ebooks {
-      padding: 5rem; }
     .body .puntos-venta {
       padding-bottom: 20rem; }
     .body .footer .container {
@@ -985,13 +982,6 @@ ul {
       flex-direction: column;
       justify-content: center;
       align-items: center; } }
-
-/*PANTALLAS PEQUEÑAS*/
-@media (min-width: 800px) {
-  .body .wide {
-    grid-column: span 2; }
-  .body .tall {
-    grid-row: span 2; } }
 
 @media (max-width: 630px) {
   .body {
@@ -1052,8 +1042,12 @@ ul {
       flex-direction: column; }
       .body .motivos .container .porque h3 {
         width: 280px; }
+      .body .motivos .container .porque h2 {
+        padding-top: 2rem; }
+      .body .motivos .container .iconos {
+        padding-bottom: 2rem; }
     .body .destacados .tarjetas-productos {
-      padding: 0 75rem 0 0; }
+      padding: 0 60rem 0 0; }
     .body .puntos-venta .map {
       width: 40rem;
       height: 50rem; }
@@ -1061,27 +1055,171 @@ ul {
       width: 40rem;
       height: 40rem; } }
 
+/*Específico*/
+@media (max-width: 600px) {
+  .body {
+    /*DESTACADOS*/ }
+    .body .destacados .tarjetas-productos {
+      padding: 0 70rem 0 0; } }
+
 @media (max-width: 460px) {
   .body {
     /*MAIN*/
     /*MOTIVOS*/
     /*TUTORIALES*/
+    /*FOOTER*/
     /*DESTACADOS*/ }
     .body .main .frase h2 {
       font-size: 6em; }
     .body .motivos .container .porque h2 {
       font-size: 2em;
       padding-top: 2rem; }
+    .body .motivos .container .iconos {
+      padding-bottom: 2rem; }
     .body .tutoriales .container {
       justify-content: center;
       align-items: center; }
-      .body .tutoriales .container .videos {
+      .body .tutoriales .container .videos,
+      .body .tutoriales .container .videos2 {
         width: 30rem;
         height: 40rem; }
+    .body .footer .container {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      gap: 3rem; }
+      .body .footer .container .descripcion-footer {
+        padding-top: 2rem;
+        padding-left: 5rem; }
+        .body .footer .container .descripcion-footer p {
+          width: 280px; }
+      .body .footer .container .nav-footer {
+        padding-right: 0;
+        padding-left: 2rem; }
+      .body .footer .container .redes-footer {
+        display: flex;
+        justify-content: end;
+        padding-right: 0;
+        padding-left: 2rem;
+        padding-bottom: 8rem; }
+    .body .footer .copy {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
     .body .destacados .container .tienda .boton-tienda {
       padding-bottom: 5rem; }
     .body .destacados .tarjetas-productos {
       padding: 0 80rem 0 0; }
+      .body .destacados .tarjetas-productos .slick-arrow {
+        top: -8%;
+        left: 25%; }
+      .body .destacados .tarjetas-productos .slick-prev {
+        left: 20%; } }
+
+@media (max-width: 401px) {
+  .body {
+    /*MAIN*/
+    /*NOVEDADES*/
+    /*MOTIVOS*/
+    /*TUTORIALES*/
+    /*Sobre-mi*/
+    /*Puntos de venta*/
+    /*DESTACADOS*/ }
+    .body .main .frase h2 {
+      font-size: 4em; }
+    .body .main .frase p {
+      font-size: 1.5em; }
+    .body .novedades .container .tarjetas .tarjeta {
+      width: 30rem; }
+      .body .novedades .container .tarjetas .tarjeta .tarjeta-derecha h3 {
+        padding-bottom: 0rem; }
+      .body .novedades .container .tarjetas .tarjeta .tarjeta-derecha p {
+        font-size: 1.2em;
+        padding-bottom: 0.5rem; }
+    .body .motivos .container .porque {
+      width: 250px; }
+      .body .motivos .container .porque h2 {
+        font-size: 2em;
+        padding-top: 2rem;
+        text-align: center; }
+      .body .motivos .container .porque h3 {
+        font-size: 1.5em; }
+    .body .motivos .container .iconos {
+      padding-bottom: 2rem; }
+      .body .motivos .container .iconos .buena-atencion {
+        width: 250px; }
+        .body .motivos .container .iconos .buena-atencion h3 {
+          font-size: 1.5em; }
+      .body .motivos .container .iconos .precios {
+        width: 250px; }
+        .body .motivos .container .iconos .precios h3 {
+          font-size: 1.5em; }
+      .body .motivos .container .iconos .calidad {
+        width: 250px; }
+        .body .motivos .container .iconos .calidad h3 {
+          font-size: 1.5em; }
+    .body .tutoriales .container .titulo-tips {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .body .tutoriales .container .titulo-tips .titulos-tutoriales .links-tuto a {
+        font-size: 1.5em; }
+      .body .tutoriales .container .titulo-tips .tips-tutoriales {
+        padding-left: 6rem; }
+        .body .tutoriales .container .titulo-tips .tips-tutoriales h3 {
+          font-size: 2em;
+          padding-bottom: 2rem; }
+        .body .tutoriales .container .titulo-tips .tips-tutoriales p {
+          width: 280px; }
+    .body .sobre-mi .container .fotos .foto1 {
+      width: 30rem; }
+    .body .sobre-mi .container .fotos .otras-fotos .foto {
+      width: 30rem;
+      height: 25rem; }
+    .body .sobre-mi .container .descripcion {
+      padding-right: 1rem; }
+      .body .sobre-mi .container .descripcion h2 {
+        font-size: 2em;
+        padding-top: 8rem; }
+      .body .sobre-mi .container .descripcion p {
+        width: 280px;
+        font-size: 1.5em; }
+    .body .puntos-venta {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #FFF5EC;
+      display: flex;
+      flex-wrap: wrap-reverse;
+      margin: 0 auto;
+      justify-content: center;
+      align-items: center;
+      gap: 5rem;
+      overflow: hidden;
+      position: relative; }
+      .body .puntos-venta .map {
+        width: 30rem;
+        height: 30rem; }
+      .body .puntos-venta .titulo-puntos {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        width: 30rem;
+        height: 50rem;
+        border: solid 2px #A09082;
+        border-radius: 20px;
+        max-height: 60rem;
+        overflow-y: auto;
+        padding: 2rem; }
+    .body .destacados .container .tienda .boton-tienda {
+      padding-top: 2rem;
+      padding-bottom: 5rem; }
+      .body .destacados .container .tienda .boton-tienda h2 {
+        font-size: 2em; }
+    .body .destacados .tarjetas-productos {
+      padding: 0 85rem 0 0; }
       .body .destacados .tarjetas-productos .slick-arrow {
         top: -8%;
         left: 25%; }
